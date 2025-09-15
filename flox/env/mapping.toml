@@ -1,0 +1,30 @@
+[[package]]
+nix = "bat-extras.core"
+brew = "bat-extras"
+
+[[package]]
+nix = "delta"
+brew = "git-delta"
+
+[[package]]
+nix = "jujutsu"
+brew = "jj"
+
+[[package]]
+nix = "nodejs"
+brew = "node"
+
+[[package]]
+nix = "tree-sitter"
+brew = "tree-sitter-cli"
+
+[[package]]
+nix = "github:nix-community/neovim-nightly-overlay"
+brew = "neovim"
+type = "formula"
+args = ["HEAD"]
+
+[[package]]
+nix = "claude-code"
+brew = "claude-code"
+type = "cask"
