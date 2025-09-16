@@ -2,8 +2,8 @@
   description = "HuaDeity's Configuration for MacOS and Linux";
 
   nixConfig = {
-    extra-trusted-substituters = ["https://cache.flox.dev"];
-    extra-trusted-public-keys = ["flox-cache-public-1:7F4OyH7ZCnFhcze3fJdfyXYLQw/aV7GEed86nQ7IsOs="];
+    extra-trusted-substituters = [ "https://cache.flox.dev" ];
+    extra-trusted-public-keys = [ "flox-cache-public-1:7F4OyH7ZCnFhcze3fJdfyXYLQw/aV7GEed86nQ7IsOs=" ];
   };
 
   inputs = {
@@ -29,7 +29,8 @@
     mcp-hub.url = "github:ravitemer/mcp-hub";
   };
 
-  outputs = inputs:
+  outputs =
+    inputs:
     inputs.blueprint {
       inherit inputs;
       nixpkgs.config.allowUnfree = true;
