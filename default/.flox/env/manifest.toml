@@ -15,10 +15,59 @@ version = 1
 ##  $ flox show gum     <- show all versions of a package
 ## -------------------------------------------------------------------
 [install]
-alejandra.pkg-path = "alejandra"
+bash.pkg-path = "bash"
+bat.pkg-path = "bat"
+bat-extras.pkg-path = "bat-extras.core"
+biome.pkg-path = "biome"
+chafa.pkg-path = "chafa"
+chezmoi.pkg-path = "chezmoi"
+claude-code.pkg-path = "claude-code"
+codex.pkg-path = "codex"
+direnv.pkg-path = "direnv"
+doppler.pkg-path = "doppler"
+eza.pkg-path = "eza"
+fd.pkg-path = "fd"
+fish.pkg-path = "fish"
+fzf.pkg-path = "fzf"
+gemini-cli.pkg-path = "gemini-cli"
+gh.pkg-path = "gh"
+git.pkg-path = "git"
+delta.pkg-path = "delta"
+git-lfs.pkg-path = "git-lfs"
+glow.pkg-path = "glow"
+hexyl.pkg-path = "hexyl"
+home-manager.pkg-path = "home-manager"
+home-manager.systems = ["aarch64-darwin", "aarch64-linux", "x86_64-darwin", "x86_64-linux"]
+imagemagick.pkg-path = "imagemagick"
+jujutsu.pkg-path = "jujutsu"
+lazygit.pkg-path = "lazygit"
+ollama.pkg-path = "ollama"
+mcp-hub.flake = "github:ravitemer/mcp-hub"
+mcp-hub.systems = ["aarch64-darwin", "aarch64-linux", "x86_64-darwin", "x86_64-linux"]
+mihomo.pkg-path = "mihomo"
+mihomo.systems = ["aarch64-linux", "x86_64-linux"]
+neovim-nightly-overlay.flake = "github:nix-community/neovim-nightly-overlay"
+nix-auth.flake = "github:numtide/nix-auth"
+nix-auth.systems = ["aarch64-darwin", "aarch64-linux", "x86_64-darwin", "x86_64-linux"]
+nix-gl-host.flake = "github:numtide/nix-gl-host"
+nix-gl-host.systems = ["aarch64-linux", "x86_64-linux"]
 nixd.pkg-path = "nixd"
-nil.pkg-path = "nil"
+nixd.systems = ["aarch64-darwin", "aarch64-linux", "x86_64-darwin", "x86_64-linux"]
+nixfmt-rfc-style.pkg-path = "nixfmt-rfc-style"
+nodejs.pkg-path = "nodejs"
+nvitop.pkg-path = "nvitop"
+nvitop.systems = ["aarch64-linux", "x86_64-linux"]
+ripgrep.pkg-path = "ripgrep"
+sqlite.pkg-path = "sqlite"
 taplo.pkg-path = "taplo"
+tmux.pkg-path = "tmux"
+tree-sitter.pkg-path = "tree-sitter"
+vectorcode.pkg-path = "vectorcode"
+vectorcode.systems = ["aarch64-darwin", "x86_64-darwin", "x86_64-linux"]
+vivid.pkg-path = "vivid"
+wakatime-cli.pkg-path = "wakatime-cli"
+yazi.pkg-path = "yazi"
+zoxide.pkg-path = "zoxide"
 # gum.pkg-path = "gum"
 # gum.version = "^0.14.5"
 
@@ -105,3 +154,6 @@ taplo.pkg-path = "taplo"
 # ]
 # Uncomment to disable CUDA detection.
 # cuda-detection = false
+
+[options.activate]
+mode = "run"

@@ -3,9 +3,11 @@
   lib,
   pkgs,
   ...
-}: let
+}:
+let
   user = "wangyizun";
-in {
+in
+{
   imports = [
     flake.nixosModules.nix
     flake.homeModules.default

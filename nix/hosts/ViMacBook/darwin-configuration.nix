@@ -3,24 +3,26 @@
   flake,
   lib,
   ...
-}: let
+}:
+let
   user = "huadeity";
   brewPrefix = config.homebrew.brewPrefix;
-in {
+in
+{
   imports = [
     flake.darwinModules.default
     (flake.lib.mkDarwinUser user)
     (flake.lib.mkBrewPackages {
       inherit lib;
-      manifestFile = flake + "/flox/env/manifest.toml";
-      mappingFile = flake + "/flox/env/mapping.toml";
+      manifestFile = flake + "/default/.flox/env/manifest.toml";
+      mappingFile = flake + "/default/mapping.toml";
     })
   ];
   nixpkgs.hostPlatform = "aarch64-darwin";
 
   users.users.${user}.shell = "${brewPrefix}/fish";
 
-  environment.profiles = lib.mkOrder 799 ["$HOME/.local/state/nix/profile"];
+  environment.profiles = lib.mkOrder 799 [ "$HOME/.local/state/nix/profile" ];
 
   homebrew = {
     enable = true;
