@@ -4,11 +4,7 @@
     flake.nixosModules.default
   ];
 
-  nix.gc.interval = {
-    Weekday = 0;
-    Hour = 2;
-    Minute = 0;
-  };
+  nix.settings.trusted-users = [ "@admin" ];
 
   programs.bash = {
     interactiveShellInit = ''

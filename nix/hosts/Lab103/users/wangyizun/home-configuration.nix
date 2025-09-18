@@ -9,11 +9,10 @@ let
 in
 {
   imports = [
-    flake.nixosModules.nix
-    flake.homeModules.default
+    flake.homeModules.standalone
     (flake.lib.mkNixPackages {
       inherit lib pkgs;
-      manifestFile = flake + "/flox/env/manifest.toml";
+      manifestFile = flake + "/default/.flox/env/manifest.toml";
     })
   ];
 

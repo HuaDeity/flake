@@ -18,6 +18,7 @@ in
       mappingFile = flake + "/default/mapping.toml";
     })
   ];
+
   nixpkgs.hostPlatform = "aarch64-darwin";
 
   users.users.${user}.shell = "${brewPrefix}/fish";
