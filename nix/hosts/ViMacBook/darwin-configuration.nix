@@ -31,6 +31,7 @@ in
       "hakonharnes/tap"
       "homebrew/command-not-found"
       "huadeity/private"
+      "huadeity/tap"
       "laishulu/homebrew"
       "nrlquaker/createzap"
     ];
@@ -44,6 +45,7 @@ in
     ];
     casks = [
       "aldente"
+      "alfred"
       "apparency"
       "archaeology"
       "bettertouchtool"
@@ -56,6 +58,7 @@ in
       "font-symbols-only-nerd-font"
       "ghostty"
       "gpg-suite@nightly"
+      "helium-browser"
       "ia-markdown-dictionary"
       "ia-presenter"
       "istat-menus"
@@ -171,7 +174,7 @@ in
   system.defaults.dock.persistent-apps = [
     "/System/Applications/Phone.app"
     "/System/Volumes/Preboot/Cryptexes/App/System/Applications/Safari.app"
-    "/Applications/Dia.app"
+    "/Applications/Helium.app"
     "/System/Applications/Messages.app"
     "/Applications/ChatGPT.app"
     "/System/Applications/Music.app"

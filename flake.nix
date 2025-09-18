@@ -9,7 +9,7 @@
   inputs = {
     nixpkgs.url = "github:NixOS/nixpkgs/nixpkgs-unstable";
 
-    flox.url = "github:flox/flox/v1.7.2";
+    flox.url = "github:flox/flox/v1.7.3";
     devshell.url = "github:numtide/devshell";
     blueprint.url = "github:numtide/blueprint";
     blueprint.inputs.nixpkgs.follows = "nixpkgs";
