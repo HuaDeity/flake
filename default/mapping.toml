@@ -12,6 +12,12 @@ nix = "delta"
 brew = "git-delta"
 
 [[package]]
+nix = "github:helix-editor/helix"
+brew = "helix"
+type = "formula"
+args = ["HEAD"]
+
+[[package]]
 nix = "jujutsu"
 brew = "jj"
 
@@ -32,4 +38,3 @@ brew = "node"
 [[package]]
 nix = "tree-sitter"
 brew = "tree-sitter-cli"
-

@@ -89,7 +89,6 @@ in
       "suspicious-package"
       "syntax-highlight"
       "tencent-meeting"
-      "thebrowsercompany-dia"
       "tower"
       "xscope"
       "zed@preview"
