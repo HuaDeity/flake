@@ -9,4 +9,9 @@
   home.packages = [
     inputs.flox.packages.${pkgs.system}.default
   ];
+
+  nix.extraOptions = ''
+    # Nix configuration
+    !include access-tokens.conf
+  '';
 }

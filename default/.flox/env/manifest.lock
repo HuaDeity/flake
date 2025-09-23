@@ -63,6 +63,9 @@
       "glow": {
         "pkg-path": "glow"
       },
+      "helix": {
+        "flake": "github:helix-editor/helix"
+      },
       "hexyl": {
         "pkg-path": "hexyl"
       },
@@ -120,10 +123,22 @@
         ]
       },
       "nixd": {
-        "pkg-path": "nixd"
+        "pkg-path": "nixd",
+        "systems": [
+          "aarch64-darwin",
+          "aarch64-linux",
+          "x86_64-darwin",
+          "x86_64-linux"
+        ]
       },
       "nixfmt-rfc-style": {
-        "pkg-path": "nixfmt-rfc-style"
+        "pkg-path": "nixfmt-rfc-style",
+        "systems": [
+          "aarch64-darwin",
+          "aarch64-linux",
+          "x86_64-darwin",
+          "x86_64-linux"
+        ]
       },
       "nodejs": {
         "pkg-path": "nodejs"
@@ -4907,6 +4922,98 @@
       },
       "system": "x86_64-linux",
       "group": "toplevel",
+      "priority": 5
+    },
+    {
+      "install_id": "helix",
+      "locked-url": "github:helix-editor/helix/37fe42d05d4d65e0c8112a10cc40cfbdc95e8a3c?narHash=sha256-Y4PRLA9vpgR6olcHrcdQcPjZ2ukb4L3xnS5xJLS%2BugU%3D",
+      "flake-description": "A post-modern text editor.",
+      "locked-flake-attr-path": "packages.aarch64-darwin.default",
+      "derivation": "/nix/store/cx7bgj3af15n37xmc5slwqk6rn0yqj9z-helix-term.drv",
+      "outputs": {
+        "out": "/nix/store/dqi50gjvpl1cy74zpfx2h62d72gayzax-helix-term"
+      },
+      "output-names": [
+        "out"
+      ],
+      "outputs-to-install": [
+        "out"
+      ],
+      "requested-outputs-to-install": [],
+      "package-system": "aarch64-darwin",
+      "system": "aarch64-darwin",
+      "name": "helix-term",
+      "broken": false,
+      "unfree": false,
+      "priority": 5
+    },
+    {
+      "install_id": "helix",
+      "locked-url": "github:helix-editor/helix/37fe42d05d4d65e0c8112a10cc40cfbdc95e8a3c?narHash=sha256-Y4PRLA9vpgR6olcHrcdQcPjZ2ukb4L3xnS5xJLS%2BugU%3D",
+      "flake-description": "A post-modern text editor.",
+      "locked-flake-attr-path": "packages.aarch64-linux.default",
+      "derivation": "/nix/store/2617ndgzsfkdk23sj3v7cka2n20dhj9m-helix-term.drv",
+      "outputs": {
+        "out": "/nix/store/9arl5vwl3xqayv5hjp2p8hhnbnpjc6hn-helix-term"
+      },
+      "output-names": [
+        "out"
+      ],
+      "outputs-to-install": [
+        "out"
+      ],
+      "requested-outputs-to-install": [],
+      "package-system": "aarch64-linux",
+      "system": "aarch64-linux",
+      "name": "helix-term",
+      "broken": false,
+      "unfree": false,
+      "priority": 5
+    },
+    {
+      "install_id": "helix",
+      "locked-url": "github:helix-editor/helix/37fe42d05d4d65e0c8112a10cc40cfbdc95e8a3c?narHash=sha256-Y4PRLA9vpgR6olcHrcdQcPjZ2ukb4L3xnS5xJLS%2BugU%3D",
+      "flake-description": "A post-modern text editor.",
+      "locked-flake-attr-path": "packages.x86_64-darwin.default",
+      "derivation": "/nix/store/spwfzbjj6h7r7mjfw5mw28h6246qmskm-helix-term.drv",
+      "outputs": {
+        "out": "/nix/store/dxcy2cjlgr83nvrkdl9w47jr3rpyw9rh-helix-term"
+      },
+      "output-names": [
+        "out"
+      ],
+      "outputs-to-install": [
+        "out"
+      ],
+      "requested-outputs-to-install": [],
+      "package-system": "x86_64-darwin",
+      "system": "x86_64-darwin",
+      "name": "helix-term",
+      "broken": false,
+      "unfree": false,
+      "priority": 5
+    },
+    {
+      "install_id": "helix",
+      "locked-url": "github:helix-editor/helix/37fe42d05d4d65e0c8112a10cc40cfbdc95e8a3c?narHash=sha256-Y4PRLA9vpgR6olcHrcdQcPjZ2ukb4L3xnS5xJLS%2BugU%3D",
+      "flake-description": "A post-modern text editor.",
+      "locked-flake-attr-path": "packages.x86_64-linux.default",
+      "derivation": "/nix/store/bdha8i17gxah5vjnlk5q06hnwgwjpq77-helix-term.drv",
+      "outputs": {
+        "out": "/nix/store/h6x58y0bbmxzk3m9mbf34v9xl92j63vf-helix-term"
+      },
+      "output-names": [
+        "out"
+      ],
+      "outputs-to-install": [
+        "out"
+      ],
+      "requested-outputs-to-install": [],
+      "package-system": "x86_64-linux",
+      "system": "x86_64-linux",
+      "name": "helix-term",
+      "broken": false,
+      "unfree": false,
       "priority": 5
     },
     {

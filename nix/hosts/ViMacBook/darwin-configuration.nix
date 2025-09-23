@@ -29,7 +29,6 @@ in
     taps = [
       "domt4/autoupdate"
       "hakonharnes/tap"
-      "homebrew/command-not-found"
       "huadeity/private"
       "huadeity/tap"
       "laishulu/homebrew"
@@ -54,6 +53,7 @@ in
       "cleanshot"
       "downie"
       "festivitas"
+      # "folder-preview-pro"
       "font-monaspace-var"
       "font-symbols-only-nerd-font"
       "ghostty"
@@ -106,7 +106,6 @@ in
       "FilmNoir" = 1528417240;
       "Final Cut Pro" = 424389933;
       "Flighty" = 1358823008;
-      "Folder Preview" = 6698876601;
       "GarageBand" = 682658836;
       "GoodLinks" = 1474335294;
       "GoodNotes" = 1444383602;
@@ -115,7 +114,6 @@ in
       "iA Writer" = 775737590;
       "iMovie" = 408981434;
       "Infuse" = 1136220934;
-      "Ivory" = 6444602274;
       "Just Press Record" = 1033342465;
       "Kagi for Safari" = 1622835804;
       "Keynote" = 409183694;
