@@ -23,6 +23,13 @@ chafa.pkg-path = "chafa"
 chezmoi.pkg-path = "chezmoi"
 claude-code.pkg-path = "claude-code"
 codex.pkg-path = "codex"
+copilot-language-server.pkg-path = "copilot-language-server"
+copilot-language-server.systems = [
+	"aarch64-darwin",
+	"aarch64-linux",
+	"x86_64-darwin",
+	"x86_64-linux",
+]
 delta.pkg-path = "delta"
 direnv.pkg-path = "direnv"
 doppler.pkg-path = "doppler"
@@ -98,6 +105,7 @@ tree-sitter.pkg-path = "tree-sitter"
 vectorcode.pkg-path = "vectorcode"
 vectorcode.systems = ["aarch64-darwin", "x86_64-darwin", "x86_64-linux"]
 vivid.pkg-path = "vivid"
+vscode-langservers-extracted.pkg-path = "vscode-langservers-extracted"
 wakatime-cli.pkg-path = "wakatime-cli"
 yazi.pkg-path = "yazi"
 zoxide.pkg-path = "zoxide"
