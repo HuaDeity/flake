@@ -38,7 +38,6 @@ fd.pkg-path = "fd"
 fish.pkg-path = "fish"
 fzf.pkg-path = "fzf"
 gemini-cli.pkg-path = "gemini-cli"
-gh.pkg-path = "gh"
 git.pkg-path = "git"
 git-lfs.pkg-path = "git-lfs"
 glow.pkg-path = "glow"
@@ -58,9 +57,13 @@ home-manager.systems = [
 	"x86_64-linux",
 ]
 imagemagick.pkg-path = "imagemagick"
+jq.pkg-path = "jq"
 jujutsu.pkg-path = "jujutsu"
 lazygit.pkg-path = "lazygit"
+ltex-ls-plus.pkg-path = "ltex-ls-plus"
 ollama.pkg-path = "ollama"
+markdownlint-cli2.pkg-path = "markdownlint-cli2"
+marksman.pkg-path = "marksman"
 mcp-hub.flake = "github:ravitemer/mcp-hub"
 mcp-hub.systems = [
 	"aarch64-darwin",

@@ -53,6 +53,8 @@ in
       "calibre"
       "chatgpt"
       "cleanshot"
+      "claude"
+      "container"
       "downie"
       "festivitas"
       "folder-preview-pro"
@@ -70,6 +72,7 @@ in
       "libreoffice"
       "macupdater"
       "marked-app"
+      "onyx"
       "orbstack"
       "orion"
       "pearcleaner"
@@ -111,7 +114,6 @@ in
       "Flighty" = 1358823008;
       "GarageBand" = 682658836;
       "GoodLinks" = 1474335294;
-      "GoodNotes" = 1444383602;
       "HextEdit" = 1557247094;
       "Highlights" = 1498912833;
       "iA Writer" = 775737590;
@@ -134,7 +136,6 @@ in
       "Noir" = 1592917505;
       "Numbers" = 409203825;
       "Pages" = 409201541;
-      "Perplexity" = 6714467650;
       "Photomator" = 1444636541;
       "Pinning" = 6472634746;
       "Pixelmator Pro" = 1289583905;
