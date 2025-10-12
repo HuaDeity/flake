@@ -10,7 +10,7 @@ bootstrapTokens:
 kind: InitConfiguration
 localAPIEndpoint:
   # advertiseAddress: 1.2.3.4
-  bindPort: 6444 # Change from 6443
+  bindPort: 6443
 nodeRegistration:
   criSocket: unix:///var/run/containerd/containerd.sock
   imagePullPolicy: IfNotPresent
@@ -33,7 +33,7 @@ certificateValidityPeriod: 8760h0m0s
 certificatesDir: /etc/kubernetes/pki
 clusterName: kubernetes
 controllerManager: {}
-controlPlaneEndpoint: "LOAD_BALANCER_DNS:LOAD_BALANCER_PORT"
+controlPlaneEndpoint: "192.168.103.200:6443"
 dns: {}
 encryptionAlgorithm: RSA-2048
 etcd:

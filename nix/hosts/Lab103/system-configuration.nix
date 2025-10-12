@@ -40,6 +40,10 @@ in
         ExecStart=
         ExecStart=${pathDir}/bin/kubelet $KUBELET_KUBECONFIG_ARGS $KUBELET_CONFIG_ARGS $KUBELET_KUBEADM_ARGS $KUBELET_EXTRA_ARGS
       '';
+      etc."kubernetes/manifests/kube-vip.yaml" = {
+        source = ./kube-vip.yaml;
+        mode = "0644";
+      };
     };
 
     systemd.services = {

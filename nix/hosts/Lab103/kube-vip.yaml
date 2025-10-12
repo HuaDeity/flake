@@ -44,6 +44,8 @@ spec:
       value: 192.168.103.200
     - name: prometheus_server
       value: :2112
+    - name: lb_enable
+      value: "true"
     image: ghcr.io/kube-vip/kube-vip:v1.0.1
     imagePullPolicy: IfNotPresent
     name: kube-vip
