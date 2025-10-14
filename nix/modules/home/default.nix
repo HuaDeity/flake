@@ -1,5 +1,15 @@
-{ perSystem, ... }:
 {
+  flake,
+  inputs,
+  perSystem,
+  ...
+}:
+{
+  imports = [
+    flake.nixosModules.pkgflow
+    inputs.pkgflow.homeModules.default
+  ];
+
   config = {
     home.stateVersion = "25.05";
 
@@ -10,5 +20,7 @@
     nix.extraOptions = ''
       !include access-tokens.conf
     '';
+
+    pkgflow.manifestPackages.flakeInputs = inputs;
   };
 }

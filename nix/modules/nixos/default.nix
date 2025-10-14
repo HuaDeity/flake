@@ -2,6 +2,7 @@
 {
   imports = [
     flake.nixosModules.nix
+    flake.nixosModules.pkgflow
   ];
 
   config = {
@@ -11,5 +12,4 @@
 
     environment.pathsToLink = [ "/share/fish" ];
   };
-
 }

@@ -11,8 +11,5 @@
   config = {
     # Set global manifest file path (used by all pkgflow modules)
     pkgflow.manifest.file = flake + "/default/.flox/env/manifest.toml";
-
-    # Set flakeInputs for resolving flake-based packages
-    pkgflow.manifestPackages.flakeInputs = inputs;
   };
 }
