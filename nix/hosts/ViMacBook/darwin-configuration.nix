@@ -1,7 +1,6 @@
 {
   config,
   flake,
-  inputs,
   lib,
   ...
 }:
@@ -13,7 +12,6 @@ in
   imports = [
     flake.darwinModules.default
     flake.darwinModules.primaryUser
-    inputs.pkgflow.darwinModules.homebrewManifest
   ];
 
   config = {
@@ -22,10 +20,7 @@ in
     darwin.primaryUser.name = user;
 
     # Enable pkgflow Homebrew manifest
-    pkgflow.homebrewManifest = {
-      enable = true;
-      manifestFile = flake + "/default/.flox/env/manifest.toml";
-    };
+    pkgflow.homebrewManifest.enable = true;
 
     users.users.${user}.shell = "${brewPrefix}/fish";
 

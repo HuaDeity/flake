@@ -1,7 +1,14 @@
-{ flake, pkgs, ... }:
+{
+  flake,
+  inputs,
+  pkgs,
+  ...
+}:
 {
   imports = [
     flake.homeModules.default
+    flake.modules.shared.pkgflow
+    inputs.pkgflow.homeModules.default
   ];
 
   config = {

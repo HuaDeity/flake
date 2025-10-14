@@ -6,14 +6,14 @@
 {
   imports = [
     flake.homeModules.default
+    flake.modules.shared.pkgflow
     inputs.pkgflow.homeModules.default
   ];
 
   config = {
+    # Enable pkgflow manifest packages
     pkgflow.manifestPackages = {
       enable = true;
-      manifestFile = flake + "/default/.flox/env/manifest.toml";
-      flakeInputs = inputs;
       requireSystemMatch = true;
     };
   };

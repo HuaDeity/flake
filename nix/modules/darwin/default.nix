@@ -1,7 +1,9 @@
-{ flake, ... }:
+{ flake, inputs, ... }:
 {
   imports = [
     flake.nixosModules.default
+    flake.modules.shared.pkgflow # Import shared pkgflow configuration
+    inputs.pkgflow.darwinModules.homebrewManifest # Darwin-specific Homebrew support
   ];
 
   config = {
