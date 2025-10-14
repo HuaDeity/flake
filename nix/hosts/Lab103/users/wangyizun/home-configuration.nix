@@ -16,5 +16,7 @@ in
     })
   ];
 
-  home.homeDirectory = "/nas/${user}";
+  config = {
+    home.homeDirectory = "/nas/${user}";
+  };
 }

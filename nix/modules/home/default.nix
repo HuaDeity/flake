@@ -1,12 +1,14 @@
 { perSystem, ... }:
 {
-  home.stateVersion = "25.05";
+  config = {
+    home.stateVersion = "25.05";
 
-  home.packages = [
-    perSystem.flox.default
-  ];
+    home.packages = [
+      perSystem.flox.default
+    ];
 
-  nix.extraOptions = ''
-    !include access-tokens.conf
-  '';
+    nix.extraOptions = ''
+      !include access-tokens.conf
+    '';
+  };
 }
