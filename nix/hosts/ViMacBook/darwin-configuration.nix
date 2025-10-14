@@ -1,6 +1,7 @@
 {
   config,
   flake,
+  inputs,
   lib,
   ...
 }:
@@ -11,16 +12,20 @@ in
 {
   imports = [
     flake.darwinModules.default
-    (flake.lib.mkDarwinUser user)
-    (flake.lib.mkBrewPackages {
-      inherit lib;
-      manifestFile = flake + "/default/.flox/env/manifest.toml";
-      mappingFile = flake + "/default/mapping.toml";
-    })
+    flake.darwinModules.primaryUser
+    inputs.pkgflow.darwinModules.homebrewManifest
   ];
 
   config = {
     nixpkgs.hostPlatform = "aarch64-darwin";
+
+    darwin.primaryUser.name = user;
+
+    # Enable pkgflow Homebrew manifest
+    pkgflow.homebrewManifest = {
+      enable = true;
+      manifestFile = flake + "/default/.flox/env/manifest.toml";
+    };
 
     users.users.${user}.shell = "${brewPrefix}/fish";
 

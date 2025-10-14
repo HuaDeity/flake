@@ -1,7 +1,6 @@
 {
   flake,
-  lib,
-  pkgs,
+  inputs,
   ...
 }:
 let
@@ -10,13 +9,17 @@ in
 {
   imports = [
     flake.homeModules.standalone
-    (flake.lib.mkNixPackages {
-      inherit lib pkgs;
-      manifestFile = flake + "/default/.flox/env/manifest.toml";
-    })
+    inputs.pkgflow.homeModules.default
   ];
 
   config = {
     home.homeDirectory = "/nas/${user}";
+
+    # Enable pkgflow manifest packages
+    pkgflow.manifestPackages = {
+      enable = true;
+      manifestFile = flake + "/default/.flox/env/manifest.toml";
+      flakeInputs = inputs;
+    };
   };
 }

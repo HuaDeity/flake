@@ -18,5 +18,10 @@
     environment.systemPackages = [
       perSystem.system-manager.default
     ];
+
+    container.kubernetes = {
+      "kube-vip".enable = true;
+      kubeadm.init = false;
+    };
   };
 }

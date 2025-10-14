@@ -1,35 +1,16 @@
 # Repository Guidelines
 
 ## Project Structure & Module Organization
-- `flake.nix` is the single entrypoint; it wires inputs and exports modules with the `inputs.blueprint` helper.
-- `nix/hosts/<Host>/` holds host profiles: `system-configuration.nix` or `darwin-configuration.nix` plus per-user `home-configuration.nix`.
-- `nix/modules/` contains reusable building blocks (e.g., `container/` for Kubernetes bits, `home/` for shared Home Manager rules, `nixos/` for base NixOS defaults).
-- Flox manifests live under `default/.flox/`; keep the TOML package manifest in sync with the companion mapping in `default/mapping.toml`.
+This flake manages macOS and Linux machines. `flake.nix` declares inputs and delegates evaluation to the `nix/` prefix. Host-specific definitions live in `nix/hosts/<HostName>/`, where each directory bundles the system entry point plus any host data (e.g. `config.yaml`, `kube-vip.yaml`). Shared modules are split by target: `nix/modules/darwin`, `nix/modules/nixos`, `nix/modules/home`, and `nix/modules/container`. Common helpers (primary user setup, manifest-driven packages) live beside these modules rather than under `nix/lib`. Keep generated symlinks such as `result` out of commits. Additional module notes live under `docs/`, e.g. `docs/manifest-packages.md` for Flox manifest handling.
 
 ## Build, Test, and Development Commands
-- Run `nix flake check` before proposing changes; it evaluates all hosts, modules, and devshells.
-- Build Linux hosts locally with `nix build .#nixosConfigurations.Lab103.config.system.build.toplevel`; follow with `sudo nixos-rebuild switch --flake .#Lab103` on the target.
-- Update the macOS host via `darwin-rebuild switch --flake .#ViMacBook`.
-- Refresh user environments using `home-manager switch --flake .#wangyizun@Lab103` (adapt the suffix to the desired `<user>@<host>`).
+Use `nix develop` to enter the repo’s toolchain with `nixfmt`, `jj`, and other declared utilities. Validate the configuration with `nix flake check`, which evaluates every output and runs defined checks. Build concrete systems before deploying: `nix build .#darwinConfigurations.ViMacBook.system` for the macOS host, and `nix build .#nixosConfigurations.Lab103.config.system.build.toplevel` for the Lab103 NixOS deployment. To preview a Home Manager profile, run `nix build .#homeConfigurations.ViMacBook.activationPackage` and inspect the resulting `result` link.
 
 ## Coding Style & Naming Conventions
-- Prefer the standard 2-space Nix indentation and keep attribute sets alphabetised when practical.
-- Format Nix code with `nix fmt` (powered by `nixfmt-rfc-style` from the Flox env); ensure imports remain one per line.
-- Use descriptive attribute names (e.g., `mkNixPackages`, `home.packages`) mirroring the structure already established in `nix/lib/default.nix`.
-- Check in generated derivations only when reproducible; never commit machine-specific paths from `/nix/store`.
+Format all `.nix` files with `nix fmt` (treefmt + `nixfmt-rfc-style`). Default to two-space indentation and align attribute sets so related keys stay readable. Use hyphenated filenames for entry points (`darwin-configuration.nix`) and rely on module wiring (`flake.modules.darwin.primaryUser`, `flake.modules.home.manifestPackages`, `flake.modules.shared.manifest`). Attribute names should remain lowerCamelCase unless interacting with upstream modules. Keep TOML manifests (`nix/modules/darwin/config/mapping.toml`) sorted alphabetically by package key, set a repo-wide manifest path via `shared.manifest.file`, and flip `home.manifestPackages.outputs.system.enable = true` when the shared manifest should feed system packages.
 
 ## Testing Guidelines
-- Treat `nix flake check` as the minimum gate; add `nix eval .#<output>` when validating new attributes.
-- Exercise system deployments with `nixos-rebuild test --flake .#Lab103` or `darwin-rebuild check --flake .#ViMacBook` before switching.
-- For container modules, run `nix build .#modules.container.kubernetes` to confirm the YAML renders, then validate against `kubeadm` in a sandbox cluster.
+`nix flake check` is the baseline gate; run it before every PR. When adding modules, also run a targeted evaluation such as `nix eval .#darwinConfigurations.ViMacBook.options` or the analogous `nixosConfigurations` command to confirm option resolution. For container modules, ensure referenced manifests exist and that Kubernetes YAML passes `kubectl apply --dry-run=client` out-of-band. Capture any host-specific caveats in README snippets under `nix/hosts/<HostName>/`.
 
 ## Commit & Pull Request Guidelines
-- The repository is managed with Jujutsu (`.jj/`); follow the existing short, imperative subject style scoped by area (e.g., `nixos: enable containerd`).
-- Use bodies for rationale and rollout notes, wrapping at ~72 characters; list follow-ups with `-` bullets.
-- Group related refactors into one change set; leverage `jj squash` instead of force-pushing.
-- Pull requests should link supporting issues, call out affected hosts, and include any screenshots or logs that demonstrate successful rebuilds.
-
-## Security & Configuration Tips
-- Secrets and tokens belong in `~/.config/nix/access-tokens.conf`, which is referenced via `nix.extraOptions`—never commit credentials.
-- When editing Homebrew mappings, update both `default/mapping.toml` and the Flox manifest to keep macOS parity with Nix packages.
-- Validate third-party inputs (e.g., overlays, caches) before adding them to `flake.nix`, and document the motivation in the PR body.
+Follow the short imperative style used in the log (`Add kube-vip config`, `Refactor for nix modules`). Reference the affected module or host in the subject, and avoid multi-topic commits. Pull requests should include: a concise summary, before/after context for user-facing changes, confirmation that `nix flake check` and relevant builds succeeded, and links to any tracking issues or deployment notes. Screenshots are only required when a change alters rendered assets (rare here).

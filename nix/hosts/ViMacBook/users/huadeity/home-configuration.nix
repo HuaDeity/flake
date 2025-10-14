@@ -1,16 +1,20 @@
 {
   flake,
-  lib,
-  pkgs,
+  inputs,
   ...
 }:
 {
   imports = [
     flake.homeModules.default
-    (flake.lib.mkNixPackages {
-      inherit lib pkgs;
-      manifestFile = flake + "/default/.flox/env/manifest.toml";
-      darwinMode = true;
-    })
+    inputs.pkgflow.homeModules.default
   ];
+
+  config = {
+    pkgflow.manifestPackages = {
+      enable = true;
+      manifestFile = flake + "/default/.flox/env/manifest.toml";
+      flakeInputs = inputs;
+      requireSystemMatch = true;
+    };
+  };
 }

@@ -29,6 +29,9 @@
     neovim-nightly-overlay.url = "github:nix-community/neovim-nightly-overlay";
     nix-gl-host.url = "github:arilotter/nix-gl-host-rs";
     mcp-hub.url = "github:ravitemer/mcp-hub";
+
+    pkgflow.url = "github:HuaDeity/pkgflow";
+    pkgflow.inputs.nixpkgs.follows = "nixpkgs";
   };
 
   outputs =
