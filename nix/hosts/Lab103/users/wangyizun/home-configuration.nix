@@ -1,5 +1,5 @@
 {
-  flake,
+  inputs,
   ...
 }:
 let
@@ -7,13 +7,10 @@ let
 in
 {
   imports = [
-    flake.homeModules.standalone
+    inputs.self.homeModules.standalone
   ];
 
   config = {
     home.homeDirectory = "/nas/${user}";
-
-    # Enable pkgflow manifest packages
-    pkgflow.manifestPackages.enable = true;
   };
 }

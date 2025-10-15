@@ -1,11 +1,10 @@
 {
-  flake,
   pkgs,
   ...
 }:
 {
   imports = [
-    flake.homeModules.default
+    ./default.nix
   ];
 
   config = {

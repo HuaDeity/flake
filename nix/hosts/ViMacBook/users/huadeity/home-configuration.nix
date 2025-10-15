@@ -1,17 +1,14 @@
 {
-  flake,
+  inputs,
   ...
 }:
 {
   imports = [
-    flake.homeModules.default
+    inputs.self.homeModules.default
   ];
 
   config = {
     # Enable pkgflow manifest packages
-    pkgflow.manifestPackages = {
-      enable = true;
-      requireSystemMatch = true;
-    };
+    pkgflow.manifestPackages.requireSystemMatch = true;
   };
 }

@@ -42,12 +42,6 @@ git.pkg-path = "git"
 git-lfs.pkg-path = "git-lfs"
 glow.pkg-path = "glow"
 helix.flake = "github:helix-editor/helix"
-helix.systems = [
-	"aarch64-darwin",
-	"aarch64-linux",
-	"x86_64-darwin",
-	"x86_64-linux",
-]
 hexyl.pkg-path = "hexyl"
 home-manager.pkg-path = "home-manager"
 home-manager.systems = [

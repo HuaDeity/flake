@@ -27,6 +27,15 @@
       "codex": {
         "pkg-path": "codex"
       },
+      "copilot-language-server": {
+        "pkg-path": "copilot-language-server",
+        "systems": [
+          "aarch64-darwin",
+          "aarch64-linux",
+          "x86_64-darwin",
+          "x86_64-linux"
+        ]
+      },
       "delta": {
         "pkg-path": "delta"
       },
@@ -50,9 +59,6 @@
       },
       "gemini-cli": {
         "pkg-path": "gemini-cli"
-      },
-      "gh": {
-        "pkg-path": "gh"
       },
       "git": {
         "pkg-path": "git"
@@ -81,11 +87,23 @@
       "imagemagick": {
         "pkg-path": "imagemagick"
       },
+      "jq": {
+        "pkg-path": "jq"
+      },
       "jujutsu": {
         "pkg-path": "jujutsu"
       },
       "lazygit": {
         "pkg-path": "lazygit"
+      },
+      "ltex-ls-plus": {
+        "pkg-path": "ltex-ls-plus"
+      },
+      "markdownlint-cli2": {
+        "pkg-path": "markdownlint-cli2"
+      },
+      "marksman": {
+        "pkg-path": "marksman"
       },
       "mcp-hub": {
         "flake": "github:ravitemer/mcp-hub",
@@ -178,6 +196,9 @@
       },
       "vivid": {
         "pkg-path": "vivid"
+      },
+      "vscode-langservers-extracted": {
+        "pkg-path": "vscode-langservers-extracted"
       },
       "wakatime-cli": {
         "pkg-path": "wakatime-cli"
@@ -1165,6 +1186,122 @@
       "priority": 5
     },
     {
+      "attr_path": "copilot-language-server",
+      "broken": false,
+      "derivation": "/nix/store/hrbhgiv19vhfgvpw01j625p814dcmsdb-copilot-language-server-1.367.0.drv",
+      "description": "Use GitHub Copilot with any editor or IDE via the Language Server Protocol",
+      "install_id": "copilot-language-server",
+      "license": "GitHub Copilot Product Specific Terms",
+      "locked_url": "https://github.com/flox/nixpkgs?rev=c23193b943c6c689d70ee98ce3128239ed9e32d1",
+      "name": "copilot-language-server-1.367.0",
+      "pname": "copilot-language-server",
+      "rev": "c23193b943c6c689d70ee98ce3128239ed9e32d1",
+      "rev_count": 861038,
+      "rev_date": "2025-09-13T06:43:22Z",
+      "scrape_date": "2025-09-15T02:00:42.530487Z",
+      "stabilities": [
+        "unstable"
+      ],
+      "unfree": true,
+      "version": "1.367.0",
+      "outputs_to_install": [
+        "out"
+      ],
+      "outputs": {
+        "out": "/nix/store/n3r9lijlzpabkbk7gxb9cca8irwhqp8s-copilot-language-server-1.367.0"
+      },
+      "system": "aarch64-darwin",
+      "group": "toplevel",
+      "priority": 5
+    },
+    {
+      "attr_path": "copilot-language-server",
+      "broken": false,
+      "derivation": "/nix/store/0bmsq4zx2wh0k4cnq8arqjki58ipm7pb-copilot-language-server-1.367.0.drv",
+      "description": "Use GitHub Copilot with any editor or IDE via the Language Server Protocol",
+      "install_id": "copilot-language-server",
+      "license": "GitHub Copilot Product Specific Terms",
+      "locked_url": "https://github.com/flox/nixpkgs?rev=c23193b943c6c689d70ee98ce3128239ed9e32d1",
+      "name": "copilot-language-server-1.367.0",
+      "pname": "copilot-language-server",
+      "rev": "c23193b943c6c689d70ee98ce3128239ed9e32d1",
+      "rev_count": 861038,
+      "rev_date": "2025-09-13T06:43:22Z",
+      "scrape_date": "2025-09-15T02:29:40.513915Z",
+      "stabilities": [
+        "unstable"
+      ],
+      "unfree": true,
+      "version": "1.367.0",
+      "outputs_to_install": [
+        "out"
+      ],
+      "outputs": {
+        "out": "/nix/store/gpaxvsiaffl4ybc043hs38z5ssvv5ygj-copilot-language-server-1.367.0"
+      },
+      "system": "aarch64-linux",
+      "group": "toplevel",
+      "priority": 5
+    },
+    {
+      "attr_path": "copilot-language-server",
+      "broken": false,
+      "derivation": "/nix/store/b4zqk5sr99r0pya98kgmq3v8l0j55lg9-copilot-language-server-1.367.0.drv",
+      "description": "Use GitHub Copilot with any editor or IDE via the Language Server Protocol",
+      "install_id": "copilot-language-server",
+      "license": "GitHub Copilot Product Specific Terms",
+      "locked_url": "https://github.com/flox/nixpkgs?rev=c23193b943c6c689d70ee98ce3128239ed9e32d1",
+      "name": "copilot-language-server-1.367.0",
+      "pname": "copilot-language-server",
+      "rev": "c23193b943c6c689d70ee98ce3128239ed9e32d1",
+      "rev_count": 861038,
+      "rev_date": "2025-09-13T06:43:22Z",
+      "scrape_date": "2025-09-15T02:56:35.955789Z",
+      "stabilities": [
+        "unstable"
+      ],
+      "unfree": true,
+      "version": "1.367.0",
+      "outputs_to_install": [
+        "out"
+      ],
+      "outputs": {
+        "out": "/nix/store/cc9197csxvzqwns5mxxzhdy3g7d25ddz-copilot-language-server-1.367.0"
+      },
+      "system": "x86_64-darwin",
+      "group": "toplevel",
+      "priority": 5
+    },
+    {
+      "attr_path": "copilot-language-server",
+      "broken": false,
+      "derivation": "/nix/store/891i575q7dyw3mwxb7fh64sdnw4my37j-copilot-language-server-1.367.0.drv",
+      "description": "Use GitHub Copilot with any editor or IDE via the Language Server Protocol",
+      "install_id": "copilot-language-server",
+      "license": "GitHub Copilot Product Specific Terms",
+      "locked_url": "https://github.com/flox/nixpkgs?rev=c23193b943c6c689d70ee98ce3128239ed9e32d1",
+      "name": "copilot-language-server-1.367.0",
+      "pname": "copilot-language-server",
+      "rev": "c23193b943c6c689d70ee98ce3128239ed9e32d1",
+      "rev_count": 861038,
+      "rev_date": "2025-09-13T06:43:22Z",
+      "scrape_date": "2025-09-15T03:26:56.618991Z",
+      "stabilities": [
+        "unstable"
+      ],
+      "unfree": true,
+      "version": "1.367.0",
+      "outputs_to_install": [
+        "out"
+      ],
+      "outputs": {
+        "out": "/nix/store/p2w2yisvvl8kg6i8kkni7l84bsyvx0rm-copilot-language-server-1.367.0"
+      },
+      "system": "x86_64-linux",
+      "group": "toplevel",
+      "priority": 5
+    },
+    {
       "attr_path": "delta",
       "broken": false,
       "derivation": "/nix/store/zms4w0glxm6gn2zaplap3mwmc02p8lav-delta-0.18.2.drv",
@@ -2113,122 +2250,6 @@
       "priority": 5
     },
     {
-      "attr_path": "gh",
-      "broken": false,
-      "derivation": "/nix/store/68ingvq9b5h1yzrpi67m1na995m35g79-gh-2.79.0.drv",
-      "description": "GitHub CLI tool",
-      "install_id": "gh",
-      "license": "MIT",
-      "locked_url": "https://github.com/flox/nixpkgs?rev=c23193b943c6c689d70ee98ce3128239ed9e32d1",
-      "name": "gh-2.79.0",
-      "pname": "gh",
-      "rev": "c23193b943c6c689d70ee98ce3128239ed9e32d1",
-      "rev_count": 861038,
-      "rev_date": "2025-09-13T06:43:22Z",
-      "scrape_date": "2025-09-15T02:00:43.221017Z",
-      "stabilities": [
-        "unstable"
-      ],
-      "unfree": false,
-      "version": "2.79.0",
-      "outputs_to_install": [
-        "out"
-      ],
-      "outputs": {
-        "out": "/nix/store/ky5yynv151w1v0h2xby8knzy23b9csbb-gh-2.79.0"
-      },
-      "system": "aarch64-darwin",
-      "group": "toplevel",
-      "priority": 5
-    },
-    {
-      "attr_path": "gh",
-      "broken": false,
-      "derivation": "/nix/store/lp3w745x7x7qynfjaz8va8d0cw5i6mm8-gh-2.79.0.drv",
-      "description": "GitHub CLI tool",
-      "install_id": "gh",
-      "license": "MIT",
-      "locked_url": "https://github.com/flox/nixpkgs?rev=c23193b943c6c689d70ee98ce3128239ed9e32d1",
-      "name": "gh-2.79.0",
-      "pname": "gh",
-      "rev": "c23193b943c6c689d70ee98ce3128239ed9e32d1",
-      "rev_count": 861038,
-      "rev_date": "2025-09-13T06:43:22Z",
-      "scrape_date": "2025-09-15T02:29:41.535325Z",
-      "stabilities": [
-        "unstable"
-      ],
-      "unfree": false,
-      "version": "2.79.0",
-      "outputs_to_install": [
-        "out"
-      ],
-      "outputs": {
-        "out": "/nix/store/zvljqh8dxlp71r4gzc3js3s35fa2l3zb-gh-2.79.0"
-      },
-      "system": "aarch64-linux",
-      "group": "toplevel",
-      "priority": 5
-    },
-    {
-      "attr_path": "gh",
-      "broken": false,
-      "derivation": "/nix/store/690585ipgvj8755fk29mxniw2vd4ja13-gh-2.79.0.drv",
-      "description": "GitHub CLI tool",
-      "install_id": "gh",
-      "license": "MIT",
-      "locked_url": "https://github.com/flox/nixpkgs?rev=c23193b943c6c689d70ee98ce3128239ed9e32d1",
-      "name": "gh-2.79.0",
-      "pname": "gh",
-      "rev": "c23193b943c6c689d70ee98ce3128239ed9e32d1",
-      "rev_count": 861038,
-      "rev_date": "2025-09-13T06:43:22Z",
-      "scrape_date": "2025-09-15T02:56:36.611106Z",
-      "stabilities": [
-        "unstable"
-      ],
-      "unfree": false,
-      "version": "2.79.0",
-      "outputs_to_install": [
-        "out"
-      ],
-      "outputs": {
-        "out": "/nix/store/ikvh3fzss3p70y6izxcppankis418rlz-gh-2.79.0"
-      },
-      "system": "x86_64-darwin",
-      "group": "toplevel",
-      "priority": 5
-    },
-    {
-      "attr_path": "gh",
-      "broken": false,
-      "derivation": "/nix/store/6s3sds15db854kv81jghxhrvx5ic4rd8-gh-2.79.0.drv",
-      "description": "GitHub CLI tool",
-      "install_id": "gh",
-      "license": "MIT",
-      "locked_url": "https://github.com/flox/nixpkgs?rev=c23193b943c6c689d70ee98ce3128239ed9e32d1",
-      "name": "gh-2.79.0",
-      "pname": "gh",
-      "rev": "c23193b943c6c689d70ee98ce3128239ed9e32d1",
-      "rev_count": 861038,
-      "rev_date": "2025-09-13T06:43:22Z",
-      "scrape_date": "2025-09-15T03:26:57.738999Z",
-      "stabilities": [
-        "unstable"
-      ],
-      "unfree": false,
-      "version": "2.79.0",
-      "outputs_to_install": [
-        "out"
-      ],
-      "outputs": {
-        "out": "/nix/store/hx0j1gvffm0m3gx5m50gjjggkwba0zxc-gh-2.79.0"
-      },
-      "system": "x86_64-linux",
-      "group": "toplevel",
-      "priority": 5
-    },
-    {
       "attr_path": "git",
       "broken": false,
       "derivation": "/nix/store/6d98i7ksgr6d4xjjh0y6fl6ianxxzzbf-git-2.51.0.drv",
@@ -2939,6 +2960,142 @@
       "priority": 5
     },
     {
+      "attr_path": "jq",
+      "broken": false,
+      "derivation": "/nix/store/7hf5gwzdlj1y94kbh5zkl5gy5zhp9n1h-jq-1.8.1.drv",
+      "description": "Lightweight and flexible command-line JSON processor",
+      "install_id": "jq",
+      "license": "MIT",
+      "locked_url": "https://github.com/flox/nixpkgs?rev=c23193b943c6c689d70ee98ce3128239ed9e32d1",
+      "name": "jq-1.8.1",
+      "pname": "jq",
+      "rev": "c23193b943c6c689d70ee98ce3128239ed9e32d1",
+      "rev_count": 861038,
+      "rev_date": "2025-09-13T06:43:22Z",
+      "scrape_date": "2025-09-15T02:00:57.815167Z",
+      "stabilities": [
+        "unstable"
+      ],
+      "unfree": false,
+      "version": "1.8.1",
+      "outputs_to_install": [
+        "bin",
+        "man"
+      ],
+      "outputs": {
+        "bin": "/nix/store/8cadjdrc1gjc66ijgn2wnmfj6yajnxmb-jq-1.8.1-bin",
+        "dev": "/nix/store/vcjkcdi02h123i073sxma5kfhps9z2fd-jq-1.8.1-dev",
+        "doc": "/nix/store/sbr5199a3y3vpx1kaphyl4nnjlpzzzym-jq-1.8.1-doc",
+        "man": "/nix/store/11rdl4l7v5gswf5gdizk02jy39bw7bby-jq-1.8.1-man",
+        "out": "/nix/store/i8v8j94vx41c1wfzp1n69ddbrrf192pq-jq-1.8.1"
+      },
+      "system": "aarch64-darwin",
+      "group": "toplevel",
+      "priority": 5
+    },
+    {
+      "attr_path": "jq",
+      "broken": false,
+      "derivation": "/nix/store/r3407x6ni6fznp3n9fpvn8rh0ybwf0g5-jq-1.8.1.drv",
+      "description": "Lightweight and flexible command-line JSON processor",
+      "install_id": "jq",
+      "license": "MIT",
+      "locked_url": "https://github.com/flox/nixpkgs?rev=c23193b943c6c689d70ee98ce3128239ed9e32d1",
+      "name": "jq-1.8.1",
+      "pname": "jq",
+      "rev": "c23193b943c6c689d70ee98ce3128239ed9e32d1",
+      "rev_count": 861038,
+      "rev_date": "2025-09-13T06:43:22Z",
+      "scrape_date": "2025-09-15T02:30:00.873510Z",
+      "stabilities": [
+        "unstable"
+      ],
+      "unfree": false,
+      "version": "1.8.1",
+      "outputs_to_install": [
+        "bin",
+        "man"
+      ],
+      "outputs": {
+        "bin": "/nix/store/ync89vi4g1xnkj4fxspc63zfvs7dk8aw-jq-1.8.1-bin",
+        "dev": "/nix/store/194yri6cyqad6yvbhpqp5wswsppnsi7x-jq-1.8.1-dev",
+        "doc": "/nix/store/cjmvz6ma3qnhdvapjf2yghw28lrah0ja-jq-1.8.1-doc",
+        "man": "/nix/store/44k1613ynml3cgx5v9k6saqw994hqcl9-jq-1.8.1-man",
+        "out": "/nix/store/hz4c9q3baf434zw2y0yzb3a5kkj3rhwl-jq-1.8.1"
+      },
+      "system": "aarch64-linux",
+      "group": "toplevel",
+      "priority": 5
+    },
+    {
+      "attr_path": "jq",
+      "broken": false,
+      "derivation": "/nix/store/g23rabsw9k8igm73syz8xbwc76145cgc-jq-1.8.1.drv",
+      "description": "Lightweight and flexible command-line JSON processor",
+      "install_id": "jq",
+      "license": "MIT",
+      "locked_url": "https://github.com/flox/nixpkgs?rev=c23193b943c6c689d70ee98ce3128239ed9e32d1",
+      "name": "jq-1.8.1",
+      "pname": "jq",
+      "rev": "c23193b943c6c689d70ee98ce3128239ed9e32d1",
+      "rev_count": 861038,
+      "rev_date": "2025-09-13T06:43:22Z",
+      "scrape_date": "2025-09-15T02:56:50.798581Z",
+      "stabilities": [
+        "unstable"
+      ],
+      "unfree": false,
+      "version": "1.8.1",
+      "outputs_to_install": [
+        "bin",
+        "man"
+      ],
+      "outputs": {
+        "bin": "/nix/store/8kcm1dcivx14cp5z39wzma81jbrvaazs-jq-1.8.1-bin",
+        "dev": "/nix/store/wjxxw199ix3mkg8ms6k0hqfg7swxr2qv-jq-1.8.1-dev",
+        "doc": "/nix/store/17mfk267mjhnvgbm03w0scsfq82a65na-jq-1.8.1-doc",
+        "man": "/nix/store/88l2hgigy77vjgkdjps6l6vl8svxgaaa-jq-1.8.1-man",
+        "out": "/nix/store/ladmn1j7zikwdmih15d8rfh7z550y1q2-jq-1.8.1"
+      },
+      "system": "x86_64-darwin",
+      "group": "toplevel",
+      "priority": 5
+    },
+    {
+      "attr_path": "jq",
+      "broken": false,
+      "derivation": "/nix/store/22067a6y3jqcmwj75pd2v2a9ccizajd0-jq-1.8.1.drv",
+      "description": "Lightweight and flexible command-line JSON processor",
+      "install_id": "jq",
+      "license": "MIT",
+      "locked_url": "https://github.com/flox/nixpkgs?rev=c23193b943c6c689d70ee98ce3128239ed9e32d1",
+      "name": "jq-1.8.1",
+      "pname": "jq",
+      "rev": "c23193b943c6c689d70ee98ce3128239ed9e32d1",
+      "rev_count": 861038,
+      "rev_date": "2025-09-13T06:43:22Z",
+      "scrape_date": "2025-09-15T03:27:17.902181Z",
+      "stabilities": [
+        "unstable"
+      ],
+      "unfree": false,
+      "version": "1.8.1",
+      "outputs_to_install": [
+        "bin",
+        "man"
+      ],
+      "outputs": {
+        "bin": "/nix/store/7jvwwz45qap70i6asxzcnbshhz88a5sv-jq-1.8.1-bin",
+        "dev": "/nix/store/5rp4imr3xn3qwwxpgmss2q9pj8bak9wy-jq-1.8.1-dev",
+        "doc": "/nix/store/j572lmsgrx4a9bim6gwlyn9mnlf67490-jq-1.8.1-doc",
+        "man": "/nix/store/laqc7c2c9j09vm1w58vmj633vc2wb3wv-jq-1.8.1-man",
+        "out": "/nix/store/byi56qh6h63rdhfjh4plnyndfcpqx13p-jq-1.8.1"
+      },
+      "system": "x86_64-linux",
+      "group": "toplevel",
+      "priority": 5
+    },
+    {
       "attr_path": "jujutsu",
       "broken": false,
       "derivation": "/nix/store/78hlmjrbb9g8zdjp9mm0inaw40cnk6vj-jujutsu-0.33.0.drv",
@@ -3165,6 +3322,354 @@
       ],
       "outputs": {
         "out": "/nix/store/h7yni3sxkf720z7piwpq2z22pajmyfj9-lazygit-0.55.0"
+      },
+      "system": "x86_64-linux",
+      "group": "toplevel",
+      "priority": 5
+    },
+    {
+      "attr_path": "ltex-ls-plus",
+      "broken": false,
+      "derivation": "/nix/store/5n54mrjg349xdzay2iz2v2g2y9by93ba-ltex-ls-plus-18.5.1.drv",
+      "description": "LSP language server for LanguageTool",
+      "install_id": "ltex-ls-plus",
+      "license": "MPL-2.0",
+      "locked_url": "https://github.com/flox/nixpkgs?rev=c23193b943c6c689d70ee98ce3128239ed9e32d1",
+      "name": "ltex-ls-plus-18.5.1",
+      "pname": "ltex-ls-plus",
+      "rev": "c23193b943c6c689d70ee98ce3128239ed9e32d1",
+      "rev_count": 861038,
+      "rev_date": "2025-09-13T06:43:22Z",
+      "scrape_date": "2025-09-15T02:01:00.963954Z",
+      "stabilities": [
+        "unstable"
+      ],
+      "unfree": false,
+      "version": "18.5.1",
+      "outputs_to_install": [
+        "out"
+      ],
+      "outputs": {
+        "out": "/nix/store/cfdh0wvmb479m5qdp7l7agfa5dhhg7y8-ltex-ls-plus-18.5.1"
+      },
+      "system": "aarch64-darwin",
+      "group": "toplevel",
+      "priority": 5
+    },
+    {
+      "attr_path": "ltex-ls-plus",
+      "broken": false,
+      "derivation": "/nix/store/pg7lrfyw85qydch0z887v0qk0js22yha-ltex-ls-plus-18.5.1.drv",
+      "description": "LSP language server for LanguageTool",
+      "install_id": "ltex-ls-plus",
+      "license": "MPL-2.0",
+      "locked_url": "https://github.com/flox/nixpkgs?rev=c23193b943c6c689d70ee98ce3128239ed9e32d1",
+      "name": "ltex-ls-plus-18.5.1",
+      "pname": "ltex-ls-plus",
+      "rev": "c23193b943c6c689d70ee98ce3128239ed9e32d1",
+      "rev_count": 861038,
+      "rev_date": "2025-09-13T06:43:22Z",
+      "scrape_date": "2025-09-15T02:30:11.364555Z",
+      "stabilities": [
+        "unstable"
+      ],
+      "unfree": false,
+      "version": "18.5.1",
+      "outputs_to_install": [
+        "out"
+      ],
+      "outputs": {
+        "out": "/nix/store/clw6rg3f223k9pnzyg8rzrmwa601kax4-ltex-ls-plus-18.5.1"
+      },
+      "system": "aarch64-linux",
+      "group": "toplevel",
+      "priority": 5
+    },
+    {
+      "attr_path": "ltex-ls-plus",
+      "broken": false,
+      "derivation": "/nix/store/i31f844mixk6sidgdn3k1gfxylbk0pld-ltex-ls-plus-18.5.1.drv",
+      "description": "LSP language server for LanguageTool",
+      "install_id": "ltex-ls-plus",
+      "license": "MPL-2.0",
+      "locked_url": "https://github.com/flox/nixpkgs?rev=c23193b943c6c689d70ee98ce3128239ed9e32d1",
+      "name": "ltex-ls-plus-18.5.1",
+      "pname": "ltex-ls-plus",
+      "rev": "c23193b943c6c689d70ee98ce3128239ed9e32d1",
+      "rev_count": 861038,
+      "rev_date": "2025-09-13T06:43:22Z",
+      "scrape_date": "2025-09-15T02:56:53.865545Z",
+      "stabilities": [
+        "unstable"
+      ],
+      "unfree": false,
+      "version": "18.5.1",
+      "outputs_to_install": [
+        "out"
+      ],
+      "outputs": {
+        "out": "/nix/store/g6jm7ykzflg6bsxmmblysyqyvx6fgv79-ltex-ls-plus-18.5.1"
+      },
+      "system": "x86_64-darwin",
+      "group": "toplevel",
+      "priority": 5
+    },
+    {
+      "attr_path": "ltex-ls-plus",
+      "broken": false,
+      "derivation": "/nix/store/3pax3wnp55m49gm9q3x4sdxm9mzhxdw9-ltex-ls-plus-18.5.1.drv",
+      "description": "LSP language server for LanguageTool",
+      "install_id": "ltex-ls-plus",
+      "license": "MPL-2.0",
+      "locked_url": "https://github.com/flox/nixpkgs?rev=c23193b943c6c689d70ee98ce3128239ed9e32d1",
+      "name": "ltex-ls-plus-18.5.1",
+      "pname": "ltex-ls-plus",
+      "rev": "c23193b943c6c689d70ee98ce3128239ed9e32d1",
+      "rev_count": 861038,
+      "rev_date": "2025-09-13T06:43:22Z",
+      "scrape_date": "2025-09-15T03:27:29.811847Z",
+      "stabilities": [
+        "unstable"
+      ],
+      "unfree": false,
+      "version": "18.5.1",
+      "outputs_to_install": [
+        "out"
+      ],
+      "outputs": {
+        "out": "/nix/store/62djdrhjvs0sfld301rzn5a053yr08p3-ltex-ls-plus-18.5.1"
+      },
+      "system": "x86_64-linux",
+      "group": "toplevel",
+      "priority": 5
+    },
+    {
+      "attr_path": "markdownlint-cli2",
+      "broken": false,
+      "derivation": "/nix/store/4rjmcbx2ymjn8nlpmirgkag4x503kxy2-markdownlint-cli2-0.18.1.drv",
+      "description": "Fast, flexible, configuration-based command-line interface for linting Markdown/CommonMark files with the markdownlint library",
+      "install_id": "markdownlint-cli2",
+      "license": "MIT",
+      "locked_url": "https://github.com/flox/nixpkgs?rev=c23193b943c6c689d70ee98ce3128239ed9e32d1",
+      "name": "markdownlint-cli2-0.18.1",
+      "pname": "markdownlint-cli2",
+      "rev": "c23193b943c6c689d70ee98ce3128239ed9e32d1",
+      "rev_count": 861038,
+      "rev_date": "2025-09-13T06:43:22Z",
+      "scrape_date": "2025-09-15T02:01:02.775533Z",
+      "stabilities": [
+        "unstable"
+      ],
+      "unfree": false,
+      "version": "0.18.1",
+      "outputs_to_install": [
+        "out"
+      ],
+      "outputs": {
+        "out": "/nix/store/d3sqdqvxcb5vswz0k0i1xf3f4qyh08pq-markdownlint-cli2-0.18.1"
+      },
+      "system": "aarch64-darwin",
+      "group": "toplevel",
+      "priority": 5
+    },
+    {
+      "attr_path": "markdownlint-cli2",
+      "broken": false,
+      "derivation": "/nix/store/v0mpq3qp8xyxbd540h7156i72x1dx253-markdownlint-cli2-0.18.1.drv",
+      "description": "Fast, flexible, configuration-based command-line interface for linting Markdown/CommonMark files with the markdownlint library",
+      "install_id": "markdownlint-cli2",
+      "license": "MIT",
+      "locked_url": "https://github.com/flox/nixpkgs?rev=c23193b943c6c689d70ee98ce3128239ed9e32d1",
+      "name": "markdownlint-cli2-0.18.1",
+      "pname": "markdownlint-cli2",
+      "rev": "c23193b943c6c689d70ee98ce3128239ed9e32d1",
+      "rev_count": 861038,
+      "rev_date": "2025-09-13T06:43:22Z",
+      "scrape_date": "2025-09-15T02:30:13.824729Z",
+      "stabilities": [
+        "unstable"
+      ],
+      "unfree": false,
+      "version": "0.18.1",
+      "outputs_to_install": [
+        "out"
+      ],
+      "outputs": {
+        "out": "/nix/store/fak4rqjlz73a7i17slsp62yzp2v0fc65-markdownlint-cli2-0.18.1"
+      },
+      "system": "aarch64-linux",
+      "group": "toplevel",
+      "priority": 5
+    },
+    {
+      "attr_path": "markdownlint-cli2",
+      "broken": false,
+      "derivation": "/nix/store/a3zr2y3kc5kymibv9si2pm4vza43ja6j-markdownlint-cli2-0.18.1.drv",
+      "description": "Fast, flexible, configuration-based command-line interface for linting Markdown/CommonMark files with the markdownlint library",
+      "install_id": "markdownlint-cli2",
+      "license": "MIT",
+      "locked_url": "https://github.com/flox/nixpkgs?rev=c23193b943c6c689d70ee98ce3128239ed9e32d1",
+      "name": "markdownlint-cli2-0.18.1",
+      "pname": "markdownlint-cli2",
+      "rev": "c23193b943c6c689d70ee98ce3128239ed9e32d1",
+      "rev_count": 861038,
+      "rev_date": "2025-09-13T06:43:22Z",
+      "scrape_date": "2025-09-15T02:56:55.461037Z",
+      "stabilities": [
+        "unstable"
+      ],
+      "unfree": false,
+      "version": "0.18.1",
+      "outputs_to_install": [
+        "out"
+      ],
+      "outputs": {
+        "out": "/nix/store/19qlmh0w83f9zcwazv3h8hr717jr4kfn-markdownlint-cli2-0.18.1"
+      },
+      "system": "x86_64-darwin",
+      "group": "toplevel",
+      "priority": 5
+    },
+    {
+      "attr_path": "markdownlint-cli2",
+      "broken": false,
+      "derivation": "/nix/store/x79vaj4i8yykwfdvvn59jp2nc6xapmdz-markdownlint-cli2-0.18.1.drv",
+      "description": "Fast, flexible, configuration-based command-line interface for linting Markdown/CommonMark files with the markdownlint library",
+      "install_id": "markdownlint-cli2",
+      "license": "MIT",
+      "locked_url": "https://github.com/flox/nixpkgs?rev=c23193b943c6c689d70ee98ce3128239ed9e32d1",
+      "name": "markdownlint-cli2-0.18.1",
+      "pname": "markdownlint-cli2",
+      "rev": "c23193b943c6c689d70ee98ce3128239ed9e32d1",
+      "rev_count": 861038,
+      "rev_date": "2025-09-13T06:43:22Z",
+      "scrape_date": "2025-09-15T03:27:32.350313Z",
+      "stabilities": [
+        "unstable"
+      ],
+      "unfree": false,
+      "version": "0.18.1",
+      "outputs_to_install": [
+        "out"
+      ],
+      "outputs": {
+        "out": "/nix/store/6kxfprs5snd4qd6p3s8nri94i7aghbd7-markdownlint-cli2-0.18.1"
+      },
+      "system": "x86_64-linux",
+      "group": "toplevel",
+      "priority": 5
+    },
+    {
+      "attr_path": "marksman",
+      "broken": false,
+      "derivation": "/nix/store/mbh2h3fasgqpwd898gapql5afdjl1bln-marksman-2024-12-18.drv",
+      "description": "Language Server for Markdown",
+      "install_id": "marksman",
+      "license": "MIT",
+      "locked_url": "https://github.com/flox/nixpkgs?rev=c23193b943c6c689d70ee98ce3128239ed9e32d1",
+      "name": "marksman-2024-12-18",
+      "pname": "marksman",
+      "rev": "c23193b943c6c689d70ee98ce3128239ed9e32d1",
+      "rev_count": 861038,
+      "rev_date": "2025-09-13T06:43:22Z",
+      "scrape_date": "2025-09-15T02:01:02.779344Z",
+      "stabilities": [
+        "unstable"
+      ],
+      "unfree": false,
+      "version": "2024-12-18",
+      "outputs_to_install": [
+        "out"
+      ],
+      "outputs": {
+        "out": "/nix/store/jfq32hh3zhxw23802qj2pl72y9n0hvj6-marksman-2024-12-18"
+      },
+      "system": "aarch64-darwin",
+      "group": "toplevel",
+      "priority": 5
+    },
+    {
+      "attr_path": "marksman",
+      "broken": false,
+      "derivation": "/nix/store/cw66im56lzwwhgw302jd951fa0si35a5-marksman-2024-12-18.drv",
+      "description": "Language Server for Markdown",
+      "install_id": "marksman",
+      "license": "MIT",
+      "locked_url": "https://github.com/flox/nixpkgs?rev=c23193b943c6c689d70ee98ce3128239ed9e32d1",
+      "name": "marksman-2024-12-18",
+      "pname": "marksman",
+      "rev": "c23193b943c6c689d70ee98ce3128239ed9e32d1",
+      "rev_count": 861038,
+      "rev_date": "2025-09-13T06:43:22Z",
+      "scrape_date": "2025-09-15T02:30:13.831459Z",
+      "stabilities": [
+        "unstable"
+      ],
+      "unfree": false,
+      "version": "2024-12-18",
+      "outputs_to_install": [
+        "out"
+      ],
+      "outputs": {
+        "out": "/nix/store/92x96x9ygfv4ffx2g7bx0cyg6rphy7yd-marksman-2024-12-18"
+      },
+      "system": "aarch64-linux",
+      "group": "toplevel",
+      "priority": 5
+    },
+    {
+      "attr_path": "marksman",
+      "broken": false,
+      "derivation": "/nix/store/rs9ilacilra4zz02d6l0jdzg79jg55yh-marksman-2024-12-18.drv",
+      "description": "Language Server for Markdown",
+      "install_id": "marksman",
+      "license": "MIT",
+      "locked_url": "https://github.com/flox/nixpkgs?rev=c23193b943c6c689d70ee98ce3128239ed9e32d1",
+      "name": "marksman-2024-12-18",
+      "pname": "marksman",
+      "rev": "c23193b943c6c689d70ee98ce3128239ed9e32d1",
+      "rev_count": 861038,
+      "rev_date": "2025-09-13T06:43:22Z",
+      "scrape_date": "2025-09-15T02:56:55.464837Z",
+      "stabilities": [
+        "unstable"
+      ],
+      "unfree": false,
+      "version": "2024-12-18",
+      "outputs_to_install": [
+        "out"
+      ],
+      "outputs": {
+        "out": "/nix/store/9r069sv5a859546abyk0sg83igac63nl-marksman-2024-12-18"
+      },
+      "system": "x86_64-darwin",
+      "group": "toplevel",
+      "priority": 5
+    },
+    {
+      "attr_path": "marksman",
+      "broken": false,
+      "derivation": "/nix/store/vby4lfqdgzn6rwlnkzd8n7fa578k1wcz-marksman-2024-12-18.drv",
+      "description": "Language Server for Markdown",
+      "install_id": "marksman",
+      "license": "MIT",
+      "locked_url": "https://github.com/flox/nixpkgs?rev=c23193b943c6c689d70ee98ce3128239ed9e32d1",
+      "name": "marksman-2024-12-18",
+      "pname": "marksman",
+      "rev": "c23193b943c6c689d70ee98ce3128239ed9e32d1",
+      "rev_count": 861038,
+      "rev_date": "2025-09-13T06:43:22Z",
+      "scrape_date": "2025-09-15T03:27:32.358901Z",
+      "stabilities": [
+        "unstable"
+      ],
+      "unfree": false,
+      "version": "2024-12-18",
+      "outputs_to_install": [
+        "out"
+      ],
+      "outputs": {
+        "out": "/nix/store/qg3hxm144j854pyf5l50d6yigqi85bay-marksman-2024-12-18"
       },
       "system": "x86_64-linux",
       "group": "toplevel",
@@ -4571,6 +5076,122 @@
       ],
       "outputs": {
         "out": "/nix/store/ni6p44s5z84545cgkrwy1rrcalvv101i-vivid-0.10.1"
+      },
+      "system": "x86_64-linux",
+      "group": "toplevel",
+      "priority": 5
+    },
+    {
+      "attr_path": "vscode-langservers-extracted",
+      "broken": false,
+      "derivation": "/nix/store/p05a8k2p636zasy6sdn31mnlgff25fic-vscode-langservers-extracted-4.10.0.drv",
+      "description": "HTML/CSS/JSON/ESLint language servers extracted from vscode",
+      "install_id": "vscode-langservers-extracted",
+      "license": "MIT",
+      "locked_url": "https://github.com/flox/nixpkgs?rev=c23193b943c6c689d70ee98ce3128239ed9e32d1",
+      "name": "vscode-langservers-extracted-4.10.0",
+      "pname": "vscode-langservers-extracted",
+      "rev": "c23193b943c6c689d70ee98ce3128239ed9e32d1",
+      "rev_count": 861038,
+      "rev_date": "2025-09-13T06:43:22Z",
+      "scrape_date": "2025-09-15T02:03:10.424077Z",
+      "stabilities": [
+        "unstable"
+      ],
+      "unfree": false,
+      "version": "4.10.0",
+      "outputs_to_install": [
+        "out"
+      ],
+      "outputs": {
+        "out": "/nix/store/dbb82a7npscswx7y9ymf5hffm6alr6d0-vscode-langservers-extracted-4.10.0"
+      },
+      "system": "aarch64-darwin",
+      "group": "toplevel",
+      "priority": 5
+    },
+    {
+      "attr_path": "vscode-langservers-extracted",
+      "broken": false,
+      "derivation": "/nix/store/ihf4j309lja134ymav67flhvi2ffg85s-vscode-langservers-extracted-4.10.0.drv",
+      "description": "HTML/CSS/JSON/ESLint language servers extracted from vscode",
+      "install_id": "vscode-langservers-extracted",
+      "license": "MIT",
+      "locked_url": "https://github.com/flox/nixpkgs?rev=c23193b943c6c689d70ee98ce3128239ed9e32d1",
+      "name": "vscode-langservers-extracted-4.10.0",
+      "pname": "vscode-langservers-extracted",
+      "rev": "c23193b943c6c689d70ee98ce3128239ed9e32d1",
+      "rev_count": 861038,
+      "rev_date": "2025-09-13T06:43:22Z",
+      "scrape_date": "2025-09-15T02:32:54.842536Z",
+      "stabilities": [
+        "unstable"
+      ],
+      "unfree": false,
+      "version": "4.10.0",
+      "outputs_to_install": [
+        "out"
+      ],
+      "outputs": {
+        "out": "/nix/store/d87dv1rkx8q7wg834hdq7dylxv8vx35j-vscode-langservers-extracted-4.10.0"
+      },
+      "system": "aarch64-linux",
+      "group": "toplevel",
+      "priority": 5
+    },
+    {
+      "attr_path": "vscode-langservers-extracted",
+      "broken": false,
+      "derivation": "/nix/store/7swp7j8krci75whyl2mihn6a4liknklf-vscode-langservers-extracted-4.10.0.drv",
+      "description": "HTML/CSS/JSON/ESLint language servers extracted from vscode",
+      "install_id": "vscode-langservers-extracted",
+      "license": "MIT",
+      "locked_url": "https://github.com/flox/nixpkgs?rev=c23193b943c6c689d70ee98ce3128239ed9e32d1",
+      "name": "vscode-langservers-extracted-4.10.0",
+      "pname": "vscode-langservers-extracted",
+      "rev": "c23193b943c6c689d70ee98ce3128239ed9e32d1",
+      "rev_count": 861038,
+      "rev_date": "2025-09-13T06:43:22Z",
+      "scrape_date": "2025-09-15T02:59:02.179789Z",
+      "stabilities": [
+        "unstable"
+      ],
+      "unfree": false,
+      "version": "4.10.0",
+      "outputs_to_install": [
+        "out"
+      ],
+      "outputs": {
+        "out": "/nix/store/f6bj0xzlg1salyyvs1j0z46f78c6sv8j-vscode-langservers-extracted-4.10.0"
+      },
+      "system": "x86_64-darwin",
+      "group": "toplevel",
+      "priority": 5
+    },
+    {
+      "attr_path": "vscode-langservers-extracted",
+      "broken": false,
+      "derivation": "/nix/store/i55i9v73hhaj9sgy8gmzaiqkx3hj7sgs-vscode-langservers-extracted-4.10.0.drv",
+      "description": "HTML/CSS/JSON/ESLint language servers extracted from vscode",
+      "install_id": "vscode-langservers-extracted",
+      "license": "MIT",
+      "locked_url": "https://github.com/flox/nixpkgs?rev=c23193b943c6c689d70ee98ce3128239ed9e32d1",
+      "name": "vscode-langservers-extracted-4.10.0",
+      "pname": "vscode-langservers-extracted",
+      "rev": "c23193b943c6c689d70ee98ce3128239ed9e32d1",
+      "rev_count": 861038,
+      "rev_date": "2025-09-13T06:43:22Z",
+      "scrape_date": "2025-09-15T03:30:21.117778Z",
+      "stabilities": [
+        "unstable"
+      ],
+      "unfree": false,
+      "version": "4.10.0",
+      "outputs_to_install": [
+        "out"
+      ],
+      "outputs": {
+        "out": "/nix/store/lp6a2s7jijg42hf93411f50d3744m1hn-vscode-langservers-extracted-4.10.0"
       },
       "system": "x86_64-linux",
       "group": "toplevel",

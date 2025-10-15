@@ -1,15 +1,16 @@
-{ flake, ... }:
+{ inputs, ... }:
 {
   imports = [
-    flake.nixosModules.nix
-    flake.nixosModules.pkgflow
+    inputs.self.nixosModules.nix
+    inputs.self.modules.shared.default
   ];
 
   config = {
-    nix.channel.enable = false;
-    nix.optimise.automatic = true;
-    nix.gc.automatic = true;
-
     environment.pathsToLink = [ "/share/fish" ];
+
+    nix.channel.enable = false;
+
+    nix.gc.automatic = true;
+    nix.optimise.automatic = true;
   };
 }

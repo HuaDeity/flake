@@ -13,8 +13,8 @@
     devshell.url = "github:numtide/devshell";
     blueprint.url = "github:numtide/blueprint";
     blueprint.inputs.nixpkgs.follows = "nixpkgs";
-    # nix-auth.url = "github:numtide/nix-auth";
-    # nix-auth.inputs.nixpkgs.follows = "nixpkgs";
+    nix-auth.url = "github:numtide/nix-auth";
+    nix-auth.inputs.nixpkgs.follows = "nixpkgs";
 
     nix-darwin.url = "github:nix-darwin/nix-darwin";
     home-manager.url = "github:nix-community/home-manager";
@@ -31,7 +31,6 @@
     mcp-hub.url = "github:ravitemer/mcp-hub";
 
     pkgflow.url = "github:HuaDeity/pkgflow";
-    pkgflow.inputs.nixpkgs.follows = "nixpkgs";
   };
 
   outputs =

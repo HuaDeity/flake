@@ -1,6 +1,6 @@
 {
+  inputs,
   config,
-  flake,
   lib,
   ...
 }:
@@ -10,17 +10,14 @@ let
 in
 {
   imports = [
-    flake.darwinModules.default
-    flake.darwinModules.primaryUser
+    inputs.self.darwinModules.primaryUser
+    inputs.self.darwinModules.default
   ];
 
   config = {
     nixpkgs.hostPlatform = "aarch64-darwin";
 
     darwin.primaryUser.name = user;
-
-    # Enable pkgflow Homebrew manifest
-    pkgflow.homebrewManifest.enable = true;
 
     users.users.${user}.shell = "${brewPrefix}/fish";
 

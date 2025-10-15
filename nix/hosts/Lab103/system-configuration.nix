@@ -1,13 +1,13 @@
 {
-  flake,
+  inputs,
   perSystem,
   ...
 }:
 {
   imports = [
-    flake.nixosModules.nix
-    flake.modules.container.containerd
-    flake.modules.container.kubernetes
+    inputs.self.nixosModules.nix
+    inputs.self.modules.container.containerd
+    inputs.self.modules.container.kubernetes
   ];
 
   config = {

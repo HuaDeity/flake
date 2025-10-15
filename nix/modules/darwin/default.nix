@@ -1,8 +1,8 @@
-{ flake, inputs, ... }:
+{ inputs, ... }:
 {
   imports = [
-    flake.nixosModules.default
-    inputs.pkgflow.darwinModules.homebrewManifest # Darwin-specific Homebrew support
+    inputs.self.nixosModules.default
+    inputs.pkgflow.brewModules.default # Homebrew module (for homebrew.brews/casks)
   ];
 
   config = {
