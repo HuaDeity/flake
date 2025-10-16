@@ -6,7 +6,6 @@
   imports = [
     inputs.self.modules.shared.default
     ./flox.nix
-    inputs.pkgflow.nixModules.default # Unified nix module (auto-detects context)
   ];
 
   config = {

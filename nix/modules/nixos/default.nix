@@ -1,4 +1,4 @@
-{ inputs, ... }:
+{ inputs, pkgs, ... }:
 {
   imports = [
     inputs.self.nixosModules.nix
@@ -7,6 +7,10 @@
 
   config = {
     environment.pathsToLink = [ "/share/fish" ];
+
+    environment.systemPackages = with pkgs; [
+      perSystem.flox.default
+    ];
 
     nix.channel.enable = false;
 

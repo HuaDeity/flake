@@ -5,6 +5,7 @@
 {
   imports = [
     inputs.self.homeModules.default
+    inputs.pkgflow.nixModules.default
   ];
 
   config = {

@@ -69,9 +69,6 @@
       "glow": {
         "pkg-path": "glow"
       },
-      "helix": {
-        "flake": "github:helix-editor/helix"
-      },
       "hexyl": {
         "pkg-path": "hexyl"
       },
@@ -5546,98 +5543,6 @@
       "priority": 5
     },
     {
-      "install_id": "helix",
-      "locked-url": "github:helix-editor/helix/37fe42d05d4d65e0c8112a10cc40cfbdc95e8a3c?narHash=sha256-Y4PRLA9vpgR6olcHrcdQcPjZ2ukb4L3xnS5xJLS%2BugU%3D",
-      "flake-description": "A post-modern text editor.",
-      "locked-flake-attr-path": "packages.aarch64-darwin.default",
-      "derivation": "/nix/store/cx7bgj3af15n37xmc5slwqk6rn0yqj9z-helix-term.drv",
-      "outputs": {
-        "out": "/nix/store/dqi50gjvpl1cy74zpfx2h62d72gayzax-helix-term"
-      },
-      "output-names": [
-        "out"
-      ],
-      "outputs-to-install": [
-        "out"
-      ],
-      "requested-outputs-to-install": [],
-      "package-system": "aarch64-darwin",
-      "system": "aarch64-darwin",
-      "name": "helix-term",
-      "broken": false,
-      "unfree": false,
-      "priority": 5
-    },
-    {
-      "install_id": "helix",
-      "locked-url": "github:helix-editor/helix/37fe42d05d4d65e0c8112a10cc40cfbdc95e8a3c?narHash=sha256-Y4PRLA9vpgR6olcHrcdQcPjZ2ukb4L3xnS5xJLS%2BugU%3D",
-      "flake-description": "A post-modern text editor.",
-      "locked-flake-attr-path": "packages.aarch64-linux.default",
-      "derivation": "/nix/store/2617ndgzsfkdk23sj3v7cka2n20dhj9m-helix-term.drv",
-      "outputs": {
-        "out": "/nix/store/9arl5vwl3xqayv5hjp2p8hhnbnpjc6hn-helix-term"
-      },
-      "output-names": [
-        "out"
-      ],
-      "outputs-to-install": [
-        "out"
-      ],
-      "requested-outputs-to-install": [],
-      "package-system": "aarch64-linux",
-      "system": "aarch64-linux",
-      "name": "helix-term",
-      "broken": false,
-      "unfree": false,
-      "priority": 5
-    },
-    {
-      "install_id": "helix",
-      "locked-url": "github:helix-editor/helix/37fe42d05d4d65e0c8112a10cc40cfbdc95e8a3c?narHash=sha256-Y4PRLA9vpgR6olcHrcdQcPjZ2ukb4L3xnS5xJLS%2BugU%3D",
-      "flake-description": "A post-modern text editor.",
-      "locked-flake-attr-path": "packages.x86_64-darwin.default",
-      "derivation": "/nix/store/spwfzbjj6h7r7mjfw5mw28h6246qmskm-helix-term.drv",
-      "outputs": {
-        "out": "/nix/store/dxcy2cjlgr83nvrkdl9w47jr3rpyw9rh-helix-term"
-      },
-      "output-names": [
-        "out"
-      ],
-      "outputs-to-install": [
-        "out"
-      ],
-      "requested-outputs-to-install": [],
-      "package-system": "x86_64-darwin",
-      "system": "x86_64-darwin",
-      "name": "helix-term",
-      "broken": false,
-      "unfree": false,
-      "priority": 5
-    },
-    {
-      "install_id": "helix",
-      "locked-url": "github:helix-editor/helix/37fe42d05d4d65e0c8112a10cc40cfbdc95e8a3c?narHash=sha256-Y4PRLA9vpgR6olcHrcdQcPjZ2ukb4L3xnS5xJLS%2BugU%3D",
-      "flake-description": "A post-modern text editor.",
-      "locked-flake-attr-path": "packages.x86_64-linux.default",
-      "derivation": "/nix/store/bdha8i17gxah5vjnlk5q06hnwgwjpq77-helix-term.drv",
-      "outputs": {
-        "out": "/nix/store/h6x58y0bbmxzk3m9mbf34v9xl92j63vf-helix-term"
-      },
-      "output-names": [
-        "out"
-      ],
-      "outputs-to-install": [
-        "out"
-      ],
-      "requested-outputs-to-install": [],
-      "package-system": "x86_64-linux",
-      "system": "x86_64-linux",
-      "name": "helix-term",
-      "broken": false,
-      "unfree": false,
-      "priority": 5
-    },
-    {
       "install_id": "mcp-hub",
       "locked-url": "github:ravitemer/mcp-hub/9c7670a4c341ed3cf738a6242c0fde1cea40bccf?narHash=sha256-KakvXZf0vjdqzyT%2BLsAKHEr4GLICGXPmxl1hZ3tI7Yg%3D",
       "flake-description": "A manager server for MCP servers that handles process management and tool routing",
@@ -5739,12 +5644,12 @@
     },
     {
       "install_id": "neovim-nightly-overlay",
-      "locked-url": "github:nix-community/neovim-nightly-overlay/2376288a3cf701a272d4b083d2e39a44d087f9e2?narHash=sha256-sG0DIub/4dB4HK8CahQYm6rTcxT8LHS6QmQNwThIN6M%3D",
+      "locked-url": "github:nix-community/neovim-nightly-overlay/b85746b6f9402f0f8ba16f04263ac4a0e41a26e4?narHash=sha256-GERm1VZ2Hr6HxvNlTa7AmCKg8DSiF2/WQR2pU8s%2Bt7s%3D",
       "flake-description": "Neovim flake",
       "locked-flake-attr-path": "packages.aarch64-darwin.default",
-      "derivation": "/nix/store/ls3vrih6nriz3yq60cc2c1m8f0qhy6q8-neovim-unwrapped-nightly.drv",
+      "derivation": "/nix/store/lvhbarv5zsmkbvkk2smwq8m26pmmw1ni-neovim-unwrapped-nightly.drv",
       "outputs": {
-        "out": "/nix/store/frff6axvgyjs46brx82w3pbfnv51kp95-neovim-unwrapped-nightly"
+        "out": "/nix/store/4fkaghgngfs7346p23nks1b7nnsxsr2m-neovim-unwrapped-nightly"
       },
       "output-names": [
         "out"
@@ -5769,13 +5674,13 @@
     },
     {
       "install_id": "neovim-nightly-overlay",
-      "locked-url": "github:nix-community/neovim-nightly-overlay/2376288a3cf701a272d4b083d2e39a44d087f9e2?narHash=sha256-sG0DIub/4dB4HK8CahQYm6rTcxT8LHS6QmQNwThIN6M%3D",
+      "locked-url": "github:nix-community/neovim-nightly-overlay/b85746b6f9402f0f8ba16f04263ac4a0e41a26e4?narHash=sha256-GERm1VZ2Hr6HxvNlTa7AmCKg8DSiF2/WQR2pU8s%2Bt7s%3D",
       "flake-description": "Neovim flake",
       "locked-flake-attr-path": "packages.aarch64-linux.default",
-      "derivation": "/nix/store/9b62f05hdhmakqpy5j75pg7hc4rdl7ad-neovim-unwrapped-nightly.drv",
+      "derivation": "/nix/store/zmqbvvbyhin7bzkl0ry461n5k4d2m4p1-neovim-unwrapped-nightly.drv",
       "outputs": {
-        "debug": "/nix/store/1xi9hjiirg7ifbhsvrrw51fq3si4w1f8-neovim-unwrapped-nightly-debug",
-        "out": "/nix/store/wjnbhfpyzzrhsr02b8qyxrgymdqnxn05-neovim-unwrapped-nightly"
+        "debug": "/nix/store/5aa7zc4552wrmm85067gvdyrra4wh51z-neovim-unwrapped-nightly-debug",
+        "out": "/nix/store/amnhmcmdm1yki5xwkzkxaglssnk1zlln-neovim-unwrapped-nightly"
       },
       "output-names": [
         "out",
@@ -5801,12 +5706,12 @@
     },
     {
       "install_id": "neovim-nightly-overlay",
-      "locked-url": "github:nix-community/neovim-nightly-overlay/2376288a3cf701a272d4b083d2e39a44d087f9e2?narHash=sha256-sG0DIub/4dB4HK8CahQYm6rTcxT8LHS6QmQNwThIN6M%3D",
+      "locked-url": "github:nix-community/neovim-nightly-overlay/b85746b6f9402f0f8ba16f04263ac4a0e41a26e4?narHash=sha256-GERm1VZ2Hr6HxvNlTa7AmCKg8DSiF2/WQR2pU8s%2Bt7s%3D",
       "flake-description": "Neovim flake",
       "locked-flake-attr-path": "packages.x86_64-darwin.default",
-      "derivation": "/nix/store/4r3xkgggq083xpybl6wqm8sbh705wr6k-neovim-unwrapped-nightly.drv",
+      "derivation": "/nix/store/pmq1ryrybbrl430fmm2qq24scqg80cki-neovim-unwrapped-nightly.drv",
       "outputs": {
-        "out": "/nix/store/xpnz6hlq2i5lm0p1i3d75bm6slrhv2pf-neovim-unwrapped-nightly"
+        "out": "/nix/store/q8xxmvvcp2n5gyi3wh8bdbrpql5h2571-neovim-unwrapped-nightly"
       },
       "output-names": [
         "out"
@@ -5831,13 +5736,13 @@
     },
     {
       "install_id": "neovim-nightly-overlay",
-      "locked-url": "github:nix-community/neovim-nightly-overlay/2376288a3cf701a272d4b083d2e39a44d087f9e2?narHash=sha256-sG0DIub/4dB4HK8CahQYm6rTcxT8LHS6QmQNwThIN6M%3D",
+      "locked-url": "github:nix-community/neovim-nightly-overlay/b85746b6f9402f0f8ba16f04263ac4a0e41a26e4?narHash=sha256-GERm1VZ2Hr6HxvNlTa7AmCKg8DSiF2/WQR2pU8s%2Bt7s%3D",
       "flake-description": "Neovim flake",
       "locked-flake-attr-path": "packages.x86_64-linux.default",
-      "derivation": "/nix/store/yzbvdz1z1wyya9iziqsb690jwnampmzx-neovim-unwrapped-nightly.drv",
+      "derivation": "/nix/store/31akwv0hsiy15x60qnz8fg4ywm6i0m21-neovim-unwrapped-nightly.drv",
       "outputs": {
-        "debug": "/nix/store/pmm9nzk77d91bzq0xx6rzgsys1izkks5-neovim-unwrapped-nightly-debug",
-        "out": "/nix/store/8xnkqgs7jidgnmzpwirc9hp870vr292v-neovim-unwrapped-nightly"
+        "debug": "/nix/store/8nai9l949vzkgvz47lz9np9pjkb3kyvj-neovim-unwrapped-nightly-debug",
+        "out": "/nix/store/dvc74h998h1x537502a0fqkf0y2badmb-neovim-unwrapped-nightly"
       },
       "output-names": [
         "out",
