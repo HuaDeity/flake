@@ -1,8 +1,9 @@
 { inputs, ... }:
 {
   imports = [
-    inputs.self.nixosModules.default
+    inputs.self.modules.shared.system
     inputs.pkgflow.brewModules.default # Homebrew module (for homebrew.brews/casks)
+    ./primaryUser.nix
   ];
 
   config = {

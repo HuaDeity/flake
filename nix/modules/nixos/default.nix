@@ -1,20 +1,9 @@
-{ inputs, pkgs, ... }:
+{
+  inputs,
+  ...
+}:
 {
   imports = [
-    inputs.self.nixosModules.nix
-    inputs.self.modules.shared.default
+    inputs.self.modules.shared.system
   ];
-
-  config = {
-    environment.pathsToLink = [ "/share/fish" ];
-
-    environment.systemPackages = with pkgs; [
-      perSystem.flox.default
-    ];
-
-    nix.channel.enable = false;
-
-    nix.gc.automatic = true;
-    nix.optimise.automatic = true;
-  };
 }

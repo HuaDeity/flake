@@ -10,7 +10,6 @@ let
 in
 {
   imports = [
-    inputs.self.darwinModules.primaryUser
     inputs.self.darwinModules.default
   ];
 

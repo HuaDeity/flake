@@ -6,7 +6,7 @@
 }:
 {
   imports = [
-    inputs.self.nixosModules.nix
+    inputs.self.modules.shared.system
     inputs.self.modules.container.containerd
     inputs.self.modules.container.kubernetes
     inputs.self.nixosModules.harmonia
@@ -20,7 +20,6 @@
     environment.systemPackages = with pkgs; [
       perSystem.system-manager.default
       fish
-      perSystem.flox.default
     ];
 
     container.kubernetes = {

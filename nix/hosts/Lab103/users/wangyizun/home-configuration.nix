@@ -7,7 +7,7 @@ let
 in
 {
   imports = [
-    inputs.self.homeModules.standalone
+    inputs.self.homeModules.default
   ];
 
   config = {
