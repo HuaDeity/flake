@@ -17,7 +17,8 @@
     in
     lib.optionalAttrs (!isHomeManager) {
       nix.package = pkgs.nix;
-    } // lib.optionalAttrs (!isHomeManager && hasGc) {
+    }
+    // lib.optionalAttrs (!isHomeManager && hasGc) {
       nix.gc.automatic = true;
     };
 }

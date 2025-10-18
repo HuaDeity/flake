@@ -7,9 +7,8 @@
 {
   imports = [
     inputs.self.modules.shared.system
-    inputs.self.modules.container.containerd
-    inputs.self.modules.container.kubernetes
-    inputs.self.nixosModules.harmonia
+    inputs.self.modules.cluster.kubernetes
+    inputs.self.modules.networking.harmonia
   ];
 
   config = {
@@ -22,10 +21,18 @@
       fish
     ];
 
-    container.kubernetes = {
-      "kube-vip".enable = true;
-      kubeadm.init = false;
+    virtualisation.containerd = {
+      settings = {
+        plugins."io.containerd.cri.v1.images" = {
+          registry.config_path = "/etc/containerd/certs.d";
+        };
+      };
     };
+
+    environment.etc."containerd/certs.d/registry.k8s.io/hosts.toml".text = ''
+      [host."k8s.m.daocloud.io"]
+        capabilities = ["pull", "resolve"]
+    '';
 
     services.harmonia = {
       enable = true;

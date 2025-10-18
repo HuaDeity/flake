@@ -35,8 +35,7 @@ in
 
   config =
     let
-      homeDir =
-        if cfg.home != null then cfg.home else "/Users/${cfg.name}";
+      homeDir = if cfg.home != null then cfg.home else "/Users/${cfg.name}";
     in
     {
       assertions = [

@@ -8,7 +8,7 @@ let
   cfg = config.services.harmonia;
   format = pkgs.formats.toml { };
 
-  signKeyPaths = cfg.signKeyPaths ++ lib.optional (cfg.signKeyPath != null) cfg.signKeyPath;
+  signKeyPaths = cfg.signKeyPaths;
   # credentials = lib.imap0 (i: signKeyPath: {
   #   id = "sign-key-${builtins.toString i}";
   #   path = signKeyPath;
@@ -18,12 +18,6 @@ in
   options = {
     services.harmonia = {
       enable = lib.mkEnableOption "Harmonia: Nix binary cache written in Rust";
-
-      signKeyPath = lib.mkOption {
-        type = lib.types.nullOr lib.types.path;
-        default = null;
-        description = "DEPRECATED: Use `services.harmonia.signKeyPaths` instead. Path to the signing key to use for signing the cache";
-      };
 
       signKeyPaths = lib.mkOption {
         type = lib.types.listOf lib.types.path;
@@ -52,9 +46,6 @@ in
       }
     ];
 
-    warnings = lib.optional (
-      cfg.signKeyPath != null
-    ) "`services.harmonia.signKeyPath` is deprecated, use `services.harmonia.signKeyPaths` instead";
     nix.settings.extra-allowed-users = [ "harmonia" ];
 
     systemd.services.harmonia = {

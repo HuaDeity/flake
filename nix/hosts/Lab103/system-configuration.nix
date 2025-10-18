@@ -7,8 +7,7 @@
 {
   imports = [
     inputs.self.modules.shared.system
-    # inputs.self.modules.container.containerd
-    # inputs.self.modules.container.kubernetes
+    inputs.self.modules.cluster.kubernetes
   ];
 
   config = {
@@ -25,9 +24,13 @@
       fish
     ];
 
-    # container.kubernetes = {
-    #   "kube-vip".enable = true;
-    #   kubeadm.init = false;
-    # };
+    services.kubernetes = {
+      roles = [ "node" ];
+      kubeadm = {
+        enable = true;
+        nodeName = "Lab103";
+        controlPlaneEndpoint = "192.168.103.200:6443";
+      };
+    };
   };
 }

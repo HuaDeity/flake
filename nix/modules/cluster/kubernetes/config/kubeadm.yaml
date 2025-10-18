@@ -1,0 +1,11 @@
+apiVersion: kubeadm.k8s.io/v1beta4
+kind: InitConfiguration
+localAPIEndpoint:
+  advertiseAddress: 192.168.103.57 # need to be changed to the actual IP of the control plane node
+nodeRegistration:
+  taints: [] # Disable master node taints to allow scheduling pods on master
+---
+apiVersion: kubeadm.k8s.io/v1beta4
+controlPlaneEndpoint: "192.168.103.200:6443"
+kind: ClusterConfiguration
+kubernetesVersion: 1.34.1
