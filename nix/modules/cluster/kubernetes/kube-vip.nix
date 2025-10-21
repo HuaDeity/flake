@@ -81,6 +81,10 @@ let
       name = "prometheus_server";
       value = ":2112";
     }
+    {
+      name = "lb_enable";
+      value = "true";
+    }
   ];
 
   manifest = {

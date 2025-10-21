@@ -65,19 +65,22 @@ in
   ###### implementation
 
   config = lib.mkMerge [
-    (lib.mkIf (lib.elem "init" cfg.roles) {
+    {
       environment.systemPackages = [
         pkgs.kubernetes
+        pkgs.kubernetes-helm
+        pkgs.cilium-cli
       ];
-      services.kubernetes.kubeadm = {
-        enable = lib.mkDefault true;
-      }
-      // lib.mkIf (lib.elem "node" cfg.roles) {
-        taints = [ ];
-      };
+    }
+    (lib.mkIf (lib.elem "init" cfg.roles) {
+
     })
 
     (lib.mkIf (lib.elem "master" cfg.roles || lib.elem "init" cfg.roles) {
+      services.kubernetes.kubeadm = {
+        enable = lib.mkDefault true;
+        taints = lib.mkIf (lib.elem "node" cfg.roles) [ ];
+      };
       services.kubernetes.kube-vip.enable = lib.mkDefault true;
       services.kubernetes.kubelet = {
         enable = lib.mkDefault true;

@@ -49,20 +49,21 @@ in
         wants = [ "network-online.target" ];
         after = [ "network-online.target" ];
         path =
-          # with pkgs;
-          # [
-          #   gitMinimal
-          #   openssh
-          #   util-linuxMinimal
-          #   iproute2
-          #   ethtool
-          #   thin-provisioning-tools
-          #   iptables
-          #   socat
-          # ]
+          with pkgs;
+          [
+            # gitMinimal
+            # openssh
+            util-linuxMinimal
+            # iproute2
+            # ethtool
+            # thin-provisioning-tools
+            # iptables
+            # socat
+          ]
           #   ++ lib.optional config.boot.zfs.enabled config.boot.zfs.package
-          top.path;
+          ++ top.path;
         preStart = ''
+          mkdir -p /opt/cni/bin
           rm /opt/cni/bin/* || true
           ${concatMapStrings (package: ''
             echo "Linking cni package: ${package}"
@@ -80,7 +81,6 @@ in
       # Always include cni plugins
       services.kubernetes.kubelet.cni.packages = [
         pkgs.cni-plugins
-        pkgs.cilium-cli
       ];
     })
 

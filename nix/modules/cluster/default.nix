@@ -4,6 +4,9 @@
   pkgs,
   ...
 }:
+let
+  virtualIp = "192.168.103.200";
+in
 {
   imports = [
     inputs.self.modules.shared.system
@@ -21,6 +24,17 @@
       fish
     ];
 
+    services.kubernetes = {
+      kubeadm = {
+        controlPlaneEndpoint = "${virtualIp}:6443";
+        kubernetesVersion = "1.34.1";
+      };
+      kube-vip = {
+        address = virtualIp;
+        kubeVipVersion = "v1.0.1";
+      };
+    };
+
     virtualisation.containerd = {
       settings = {
         plugins."io.containerd.cri.v1.images" = {
@@ -33,10 +47,5 @@
       [host."k8s.m.daocloud.io"]
         capabilities = ["pull", "resolve"]
     '';
-
-    services.harmonia = {
-      enable = true;
-      signKeyPaths = [ "/var/lib/harmonia/cache-priv-key.pem" ];
-    };
   };
 }

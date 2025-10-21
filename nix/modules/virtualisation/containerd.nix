@@ -42,12 +42,6 @@ in
   config = lib.mkIf cfg.enable {
     virtualisation.containerd = {
       args.config = toString containerdConfigChecked;
-      settings = {
-        version = 3;
-        plugins."io.containerd.cri.v1.runtime" = {
-          cni.bin_dir = lib.mkOptionDefault "${pkgs.cni-plugins}/bin";
-        };
-      };
     };
 
     environment.systemPackages = [
@@ -68,7 +62,6 @@ in
         containerd
         runc
         apparmor-parser
-        apparmor-utils
         # iptables
       ];
       # ++ lib.optional config.boot.zfs.enabled config.boot.zfs.package;
