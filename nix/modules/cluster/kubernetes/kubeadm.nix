@@ -26,17 +26,12 @@ let
       localAPIEndpoint = {
         advertiseAddress = cfg.advertiseAddress;
       };
-      certificateKey = "13d7246e1cf19e4da30e02375a687a2a3a985d12df482854786066749f9736e5";
     };
   }
   // lib.optionalAttrs (!(lib.elem "init" top.roles)) {
     discovery = {
       bootstrapToken = {
-        token = "dn7xsy.benqmr16ijc5a2x5";
         apiServerEndpoint = cfg.controlPlaneEndpoint;
-        caCertHashes = [
-          "sha256:b01f4eab023a9e380d96b7310897838aca4b9d00603ffb9ffe3ee2022452bcab"
-        ];
       };
     };
   }

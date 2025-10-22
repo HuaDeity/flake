@@ -64,7 +64,7 @@ in
           ++ top.path;
         preStart = ''
           mkdir -p /opt/cni/bin
-          rm /opt/cni/bin/* || true
+          # rm /opt/cni/bin/* || true
           ${concatMapStrings (package: ''
             echo "Linking cni package: ${package}"
             ln -fs ${package}/bin/* /opt/cni/bin

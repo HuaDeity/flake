@@ -47,5 +47,10 @@ in
       [host."k8s.m.daocloud.io"]
         capabilities = ["pull", "resolve"]
     '';
+
+    environment.etc."containerd/certs.d/docker.io/hosts.toml".text = ''
+      [host."docker.m.daocloud.io"]
+        capabilities = ["pull", "resolve"]
+    '';
   };
 }

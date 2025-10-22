@@ -11,15 +11,8 @@
 
     services.kubernetes = {
       roles = [
-        "master"
         "node"
       ];
-      kubeadm = {
-        advertiseAddress = "192.168.103.42";
-      };
-      kube-vip = {
-        interface = "eno2";
-      };
     };
   };
 }

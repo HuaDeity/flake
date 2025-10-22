@@ -40,9 +40,7 @@ in
     };
   };
   config = lib.mkIf cfg.enable {
-    virtualisation.containerd = {
-      args.config = toString containerdConfigChecked;
-    };
+    environment.etc."containerd/config.toml".source = toString containerdConfigChecked;
 
     environment.systemPackages = [
       pkgs.containerd
