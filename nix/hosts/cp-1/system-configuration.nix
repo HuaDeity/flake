@@ -13,7 +13,7 @@
         advertiseAddress = "192.168.103.57";
       };
       kube-vip = {
-        interface = "eno2";
+        interface = "eno2np1";
       };
     };
 

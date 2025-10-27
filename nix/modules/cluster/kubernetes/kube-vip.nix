@@ -12,81 +12,80 @@ let
   otop = options.services.kubernetes;
   cfg = top.kube-vip;
 
-  baseEnv =
-    [
-      {
-        name = "vip_arp";
-        value = "true";
-      }
-      {
-        name = "port";
-        value = "6443";
-      }
-      {
-        name = "vip_nodename";
-        valueFrom.fieldRef.fieldPath = "spec.nodeName";
-      }
-      {
-        name = "vip_interface";
-        value = cfg.interface;
-      }
-      {
-        name = "vip_subnet";
-        value = "32";
-      }
-      {
-        name = "dns_mode";
-        value = "first";
-      }
-      {
-        name = "cp_enable";
-        value = "true";
-      }
-      {
-        name = "cp_namespace";
-        value = "kube-system";
-      }
-      {
-        name = "svc_enable";
-        value = "true";
-      }
-      {
-        name = "svc_leasename";
-        value = "plndr-svcs-lock";
-      }
-      {
-        name = "vip_leaderelection";
-        value = "true";
-      }
-      {
-        name = "vip_leasename";
-        value = "plndr-cp-lock";
-      }
-      {
-        name = "vip_leaseduration";
-        value = "5";
-      }
-      {
-        name = "vip_renewdeadline";
-        value = "3";
-      }
-      {
-        name = "vip_retryperiod";
-        value = "1";
-      }
-      {
-        name = "address";
-        value = cfg.address;
-      }
-      {
-        name = "prometheus_server";
-        value = ":2112";
-      }
-    ]
-    ++ lib.optional cfg.loadBalance {
-      name = "lb_enable";
+  baseEnv = [
+    {
+      name = "vip_arp";
       value = "true";
-    };
+    }
+    {
+      name = "port";
+      value = "6443";
+    }
+    {
+      name = "vip_nodename";
+      valueFrom.fieldRef.fieldPath = "spec.nodeName";
+    }
+    {
+      name = "vip_interface";
+      value = cfg.interface;
+    }
+    {
+      name = "vip_subnet";
+      value = "32";
+    }
+    {
+      name = "dns_mode";
+      value = "first";
+    }
+    {
+      name = "cp_enable";
+      value = "true";
+    }
+    {
+      name = "cp_namespace";
+      value = "kube-system";
+    }
+    {
+      name = "svc_enable";
+      value = "true";
+    }
+    {
+      name = "svc_leasename";
+      value = "plndr-svcs-lock";
+    }
+    {
+      name = "vip_leaderelection";
+      value = "true";
+    }
+    {
+      name = "vip_leasename";
+      value = "plndr-cp-lock";
+    }
+    {
+      name = "vip_leaseduration";
+      value = "5";
+    }
+    {
+      name = "vip_renewdeadline";
+      value = "3";
+    }
+    {
+      name = "vip_retryperiod";
+      value = "1";
+    }
+    {
+      name = "address";
+      value = cfg.address;
+    }
+    {
+      name = "prometheus_server";
+      value = ":2112";
+    }
+  ]
+  ++ lib.optional cfg.loadBalance {
+    name = "lb_enable";
+    value = "true";
+  };
 
   manifest = {
     apiVersion = "v1";
