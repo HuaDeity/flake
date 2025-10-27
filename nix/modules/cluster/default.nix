@@ -43,14 +43,15 @@ in
       };
     };
 
-    environment.etc."containerd/certs.d/registry.k8s.io/hosts.toml".text = ''
-      [host."k8s.m.daocloud.io"]
-        capabilities = ["pull", "resolve"]
-    '';
-
-    environment.etc."containerd/certs.d/docker.io/hosts.toml".text = ''
-      [host."docker.m.daocloud.io"]
-        capabilities = ["pull", "resolve"]
-    '';
+    environment.etc = {
+      "containerd/certs.d/registry.k8s.io/hosts.toml".text = ''
+        [host."k8s.m.daocloud.io"]
+          capabilities = ["pull", "resolve"]
+      '';
+      "containerd/certs.d/docker.io/hosts.toml".text = ''
+        [host."docker.m.daocloud.io"]
+          capabilities = ["pull", "resolve"]
+      '';
+    };
   };
 }

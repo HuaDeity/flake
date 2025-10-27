@@ -81,10 +81,6 @@ let
       name = "prometheus_server";
       value = ":2112";
     }
-    {
-      name = "lb_enable";
-      value = "true";
-    }
   ];
 
   manifest = {
@@ -163,6 +159,12 @@ in
     kubeVipVersion = mkOption {
       description = "Version of kube-vip to deploy.";
       type = str;
+    };
+
+    loadBalance = mkOption {
+      description = "Enable kube-vip load balancing functionality.";
+      type = bool;
+      default = true;
     };
   };
 
