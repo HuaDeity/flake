@@ -20,6 +20,31 @@ let
       '';
 
   settingsFormat = pkgs.formats.toml { };
+
+  # Generate registry mirror hosts.toml files
+  registryConfigDir = pkgs.runCommand "containerd-registry-config" { } ''
+    mkdir -p $out
+    ${lib.concatStringsSep "\n" (
+      lib.mapAttrsToList (
+        registry: mirrors:
+        let
+          hostsConfig = lib.listToAttrs (
+            map (mirror: {
+              name = "host.\"${mirror.host}\"";
+              value = {
+                capabilities = mirror.capabilities;
+              };
+            }) mirrors
+          );
+          hostsFile = settingsFormat.generate "hosts.toml" hostsConfig;
+        in
+        ''
+          mkdir -p $out/${registry}
+          ln -s ${hostsFile} $out/${registry}/hosts.toml
+        ''
+      ) cfg.registryMirrors
+    )}
+  '';
 in
 {
   options.virtualisation.containerd = with lib.types; {
@@ -41,6 +66,46 @@ in
 
     nvidia = {
       enable = lib.mkEnableOption "NVIDIA container runtime support";
+    };
+
+    registryMirrors = lib.mkOption {
+      type = lib.types.attrsOf (
+        lib.types.listOf (
+          lib.types.submodule {
+            options = {
+              host = lib.mkOption {
+                type = lib.types.str;
+                description = "Mirror host URL";
+              };
+              capabilities = lib.mkOption {
+                type = lib.types.listOf (lib.types.enum [
+                  "pull"
+                  "resolve"
+                  "push"
+                ]);
+                default = [
+                  "pull"
+                  "resolve"
+                ];
+                description = "Capabilities supported by this mirror";
+              };
+            };
+          }
+        )
+      );
+      default = { };
+      description = ''
+        Registry mirror configuration. Maps registry hostnames to lists of mirror hosts.
+        Example:
+        {
+          "registry.k8s.io" = [
+            { host = "k8s.m.daocloud.io"; }
+          ];
+          "docker.io" = [
+            { host = "docker.m.daocloud.io"; }
+          ];
+        }
+      '';
     };
   };
   config = lib.mkMerge [
@@ -117,6 +182,14 @@ in
               };
             };
           };
+        };
+      };
+    })
+
+    (lib.mkIf (cfg.enable && cfg.registryMirrors != { }) {
+      virtualisation.containerd.settings = {
+        plugins."io.containerd.cri.v1.images" = {
+          registry.config_path = toString registryConfigDir;
         };
       };
     })

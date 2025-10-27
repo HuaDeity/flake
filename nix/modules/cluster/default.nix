@@ -37,23 +37,15 @@ in
     };
 
     virtualisation.containerd = {
-      nvidia = true;
-      settings = {
-        plugins."io.containerd.cri.v1.images" = {
-          registry.config_path = "/etc/containerd/certs.d";
-        };
+      nvidia.enable = true;
+      registryMirrors = {
+        "registry.k8s.io" = [
+          { host = "k8s.m.daocloud.io"; }
+        ];
+        "docker.io" = [
+          { host = "docker.m.daocloud.io"; }
+        ];
       };
-    };
-
-    environment.etc = {
-      "containerd/certs.d/registry.k8s.io/hosts.toml".text = ''
-        [host."k8s.m.daocloud.io"]
-          capabilities = ["pull", "resolve"]
-      '';
-      "containerd/certs.d/docker.io/hosts.toml".text = ''
-        [host."docker.m.daocloud.io"]
-          capabilities = ["pull", "resolve"]
-      '';
     };
   };
 }
