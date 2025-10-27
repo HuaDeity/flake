@@ -28,14 +28,16 @@ let
       lib.mapAttrsToList (
         registry: mirrors:
         let
-          hostsConfig = lib.listToAttrs (
-            map (mirror: {
-              name = "host.\"${mirror.host}\"";
-              value = {
-                capabilities = mirror.capabilities;
-              };
-            }) mirrors
-          );
+          hostsConfig = {
+            host = lib.listToAttrs (
+              map (mirror: {
+                name = mirror.host;
+                value = {
+                  capabilities = mirror.capabilities;
+                };
+              }) mirrors
+            );
+          };
           hostsFile = settingsFormat.generate "hosts.toml" hostsConfig;
         in
         ''
