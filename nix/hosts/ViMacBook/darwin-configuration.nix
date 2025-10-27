@@ -31,8 +31,10 @@ in
         "huadeity/tap"
         "laishulu/homebrew"
         "nrlquaker/createzap"
+        "the-ora/ora"
       ];
       brews = [
+        "container-compose"
         "hugo"
         "laishulu/homebrew/macism"
         "mas"
@@ -42,13 +44,13 @@ in
       ];
       casks = [
         "aldente"
-        "alfred"
         "apparency"
         "archaeology"
         "bettertouchtool"
         "bookends"
         "calibre"
         "chatgpt"
+        "chatgpt-atlas"
         "cleanshot"
         "claude"
         "container"
@@ -70,8 +72,8 @@ in
         "macupdater"
         "marked-app"
         "onyx"
+        "ora"
         "orbstack"
-        "orion"
         "pearcleaner"
         "permute"
         "playcover-community"

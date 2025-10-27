@@ -38,6 +38,10 @@ in
       description = "extra args to append to the containerd cmdline";
       type = attrsOf str;
     };
+
+    nvidia = {
+      enable = lib.mkEnableOption "NVIDIA container runtime support";
+    };
   };
   config = lib.mkMerge [
     (lib.mkIf cfg.enable {
@@ -94,31 +98,26 @@ in
       };
     })
 
-    (lib.mkIf (cfg.enable && cfg.settings != { }) {
-      environment.etc = {
-        "containerd/config.d/99-nvidia.toml".text = ''
-          version = 3
-
-          [plugins]
-
-            [plugins."io.containerd.cri.v1.runtime"]
-
-              [plugins."io.containerd.cri.v1.runtime".containerd]
-
-                [plugins."io.containerd.cri.v1.runtime".containerd.runtimes]
-
-                  [plugins."io.containerd.cri.v1.runtime".containerd.runtimes.nvidia]
-                    runtime_type = 'io.containerd.runc.v2'
-
-                    [plugins."io.containerd.cri.v1.runtime".containerd.runtimes.nvidia.options]
-                      BinaryName = "/usr/bin/nvidia-container-runtime"
-                      SystemdCgroup = true
-
-                  [plugins."io.containerd.cri.v1.runtime".containerd.runtimes.runc]
-
-                    [plugins."io.containerd.cri.v1.runtime".containerd.runtimes.runc.options]
-                      SystemdCgroup = true
-        '';
+    (lib.mkIf (cfg.enable && cfg.nvidia.enable) {
+      virtualisation.containerd.settings = {
+        plugins."io.containerd.cri.v1.runtime" = {
+          containerd = {
+            runtimes = {
+              nvidia = {
+                runtime_type = "io.containerd.runc.v2";
+                options = {
+                  BinaryName = "/usr/bin/nvidia-container-runtime";
+                  SystemdCgroup = true;
+                };
+              };
+              runc = {
+                options = {
+                  SystemdCgroup = true;
+                };
+              };
+            };
+          };
+        };
       };
     })
   ];

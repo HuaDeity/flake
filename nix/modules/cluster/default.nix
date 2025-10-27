@@ -31,11 +31,13 @@ in
       };
       kube-vip = {
         address = virtualIp;
+        loadBalance = true;
         kubeVipVersion = "v1.0.1";
       };
     };
 
     virtualisation.containerd = {
+      nvidia = true;
       settings = {
         plugins."io.containerd.cri.v1.images" = {
           registry.config_path = "/etc/containerd/certs.d";

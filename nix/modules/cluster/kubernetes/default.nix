@@ -13,8 +13,6 @@ let
   defaultContainerdSettings = {
     version = 3;
 
-    imports = [ "/etc/containerd/config.d/*.toml" ];
-
     plugins."io.containerd.cri.v1.images" = {
       pinned_images.sandbox = "registry.k8s.io/pause:latest";
     };

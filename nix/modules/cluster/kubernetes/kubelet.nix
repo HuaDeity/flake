@@ -71,6 +71,7 @@ in
           '') cfg.cni.packages}
         '';
         serviceConfig = {
+          ExecStartPre = lib.optionalString top.kube-vip.loadBalance "-/sbin/modprobe ip_vs";
           ExecStart = "${top.package}/bin/kubelet";
           Restart = "always";
           StartLimitInterval = 0;
