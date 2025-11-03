@@ -1,4 +1,6 @@
 {
+  inputs,
+  config,
   pkgs,
   lib,
   options,
@@ -7,7 +9,6 @@
 {
   imports = [
     ./options.nix
-    ./pkgflow.nix
   ];
 
   config =
@@ -20,5 +21,8 @@
     }
     // lib.optionalAttrs (!isHomeManager && hasGc) {
       nix.gc.automatic = true;
+    }
+    // {
+      pkgflow.manifestFile = "${inputs.self}/${config.self.floxDir}/env/manifest.toml";
     };
 }

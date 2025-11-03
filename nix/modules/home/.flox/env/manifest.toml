@@ -24,12 +24,6 @@ chezmoi.pkg-path = "chezmoi"
 claude-code.pkg-path = "claude-code"
 codex.pkg-path = "codex"
 copilot-language-server.pkg-path = "copilot-language-server"
-copilot-language-server.systems = [
-	"aarch64-darwin",
-	"aarch64-linux",
-	"x86_64-darwin",
-	"x86_64-linux",
-]
 delta.pkg-path = "delta"
 direnv.pkg-path = "direnv"
 doppler.pkg-path = "doppler"
@@ -44,12 +38,6 @@ glow.pkg-path = "glow"
 helix.flake = "github:helix-editor/helix"
 hexyl.pkg-path = "hexyl"
 home-manager.pkg-path = "home-manager"
-home-manager.systems = [
-	"aarch64-darwin",
-	"aarch64-linux",
-	"x86_64-darwin",
-	"x86_64-linux",
-]
 imagemagick.pkg-path = "imagemagick"
 jq.pkg-path = "jq"
 jujutsu.pkg-path = "jujutsu"
@@ -59,38 +47,14 @@ ollama.pkg-path = "ollama"
 markdownlint-cli2.pkg-path = "markdownlint-cli2"
 marksman.pkg-path = "marksman"
 mcp-hub.flake = "github:ravitemer/mcp-hub"
-mcp-hub.systems = [
-	"aarch64-darwin",
-	"aarch64-linux",
-	"x86_64-darwin",
-	"x86_64-linux",
-]
 mihomo.pkg-path = "mihomo"
 mihomo.systems = ["aarch64-linux", "x86_64-linux"]
 neovim-nightly-overlay.flake = "github:nix-community/neovim-nightly-overlay"
 nix-auth.flake = "github:numtide/nix-auth"
-nix-auth.systems = [
-	"aarch64-darwin",
-	"aarch64-linux",
-	"x86_64-darwin",
-	"x86_64-linux",
-]
-nix-gl-host.flake = "github:numtide/nix-gl-host"
+nix-gl-host.flake = "github:arilotter/nix-gl-host-rs"
 nix-gl-host.systems = ["aarch64-linux", "x86_64-linux"]
 nixd.pkg-path = "nixd"
-nixd.systems = [
-	"aarch64-darwin",
-	"aarch64-linux",
-	"x86_64-darwin",
-	"x86_64-linux",
-]
 nixfmt-rfc-style.pkg-path = "nixfmt-rfc-style"
-nixfmt-rfc-style.systems = [
-	"aarch64-darwin",
-	"aarch64-linux",
-	"x86_64-darwin",
-	"x86_64-linux",
-]
 nodejs.pkg-path = "nodejs"
 nvitop.pkg-path = "nvitop"
 nvitop.systems = ["aarch64-linux", "x86_64-linux"]
@@ -100,7 +64,6 @@ taplo.pkg-path = "taplo"
 tmux.pkg-path = "tmux"
 tree-sitter.pkg-path = "tree-sitter"
 vectorcode.pkg-path = "vectorcode"
-vectorcode.systems = ["aarch64-darwin", "x86_64-darwin", "x86_64-linux"]
 vivid.pkg-path = "vivid"
 vscode-langservers-extracted.pkg-path = "vscode-langservers-extracted"
 wakatime-cli.pkg-path = "wakatime-cli"

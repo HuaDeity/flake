@@ -2,7 +2,7 @@
 {
   imports = [
     inputs.self.modules.shared.system
-    inputs.pkgflow.brewModules.default # Homebrew module (for homebrew.brews/casks)
+    inputs.pkgflow.darwinModules.pkgflow
     ./primaryUser.nix
   ];
 

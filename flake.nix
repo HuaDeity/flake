@@ -13,8 +13,6 @@
     devshell.url = "github:numtide/devshell";
     blueprint.url = "github:numtide/blueprint";
     blueprint.inputs.nixpkgs.follows = "nixpkgs";
-    nix-auth.url = "github:numtide/nix-auth";
-    nix-auth.inputs.nixpkgs.follows = "nixpkgs";
 
     nix-darwin.url = "github:nix-darwin/nix-darwin";
     home-manager.url = "github:nix-community/home-manager";
@@ -22,15 +20,10 @@
     system-manager.url = "github:numtide/system-manager";
     system-manager.inputs.nixpkgs.follows = "nixpkgs";
 
-    helix.url = "github:helix-editor/helix";
-    helix.inputs.nixpkgs.follows = "nixpkgs";
     index-database.url = "github:nix-community/nix-index-database";
     index-database.inputs.nixpkgs.follows = "nixpkgs";
-    neovim-nightly-overlay.url = "github:nix-community/neovim-nightly-overlay";
-    nix-gl-host.url = "github:arilotter/nix-gl-host-rs";
-    mcp-hub.url = "github:ravitemer/mcp-hub";
 
-    pkgflow.url = "github:HuaDeity/pkgflow/refactor/modularize-platform-modules";
+    pkgflow.url = "github:HuaDeity/pkgflow";
   };
 
   outputs =
