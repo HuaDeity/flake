@@ -30,7 +30,7 @@
     nix-gl-host.url = "github:arilotter/nix-gl-host-rs";
     mcp-hub.url = "github:ravitemer/mcp-hub";
 
-    pkgflow.url = "github:HuaDeity/pkgflow";
+    pkgflow.url = "github:HuaDeity/pkgflow/refactor/modularize-platform-modules";
   };
 
   outputs =

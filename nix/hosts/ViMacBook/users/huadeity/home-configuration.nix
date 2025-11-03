@@ -5,11 +5,12 @@
 {
   imports = [
     inputs.self.homeModules.default
-    inputs.pkgflow.nixModules.default
+    inputs.pkgflow.homeModules.default
   ];
 
   config = {
     # Enable pkgflow manifest packages
-    pkgflow.manifestPackages.requireSystemMatch = true;
+    pkgflow.requireSystemMatch = true;
+    pkgflow.caches.enable = true;
   };
 }
