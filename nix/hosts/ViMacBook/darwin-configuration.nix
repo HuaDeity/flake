@@ -43,6 +43,7 @@ in
         "tag"
       ];
       casks = [
+        "affinity"
         "aldente"
         "apparency"
         "archaeology"
@@ -107,6 +108,7 @@ in
         "Craft" = 1487937127;
         "Developer" = 640199958;
         "Dice by PCalc" = 1479250666;
+        "Dynamic Lyrics" = 6476125287;
         "Fantastical" = 975937182;
         "FilmNoir" = 1528417240;
         "Final Cut Pro" = 424389933;
@@ -121,12 +123,14 @@ in
         "Just Press Record" = 1033342465;
         "Kagi for Safari" = 1622835804;
         "Keynote" = 409183694;
+        "Kindle" = 302584613;
         "Logic Pro" = 634148309;
         "LookUp" = 872564448;
         "MainStage" = 634159523;
         "Maipo" = 789066512;
         "Mercury" = 1621800675;
         "MindNode Next" = 6446116532;
+        # "Mona 7 for Mastodon" = 0;
         "Motion" = 434290957;
         "MusicBox" = 1614730313;
         "MusicHarbor" = 1440405750;
@@ -145,14 +149,14 @@ in
         "Reeder" = 6475002485;
         "Screens 5" = 1663047912;
         "Shareful" = 1522267256;
-        "Shazem" = 897118787;
+        "Shazam" = 897118787;
         "Sketch" = 1667260533;
         "SnippetsLab" = 1006087419;
         "StopTheMadness Pro" = 6471380298;
         "Streaks" = 963034692;
         "SubManager" = 1632853914;
         "Tampermonkey" = 6738342400;
-        "Telegram" = 747648890;
+        "Tapestry" = 6448078074;
         "TestFlight" = 899247664;
         "Tot" = 1491071483;
         "Tripsy" = 1429967544;
@@ -161,6 +165,7 @@ in
         "WaterMinder" = 1415257369;
         "Wayback Machine" = 1472432422;
         "Wipr" = 1662217862;
+        "Xcode" = 497799835;
         "爱奇艺" = 1012296988;
         "腾讯视频" = 1231336508;
       };
@@ -175,14 +180,13 @@ in
       "/System/Applications/Phone.app"
       "/System/Volumes/Preboot/Cryptexes/App/System/Applications/Safari.app"
       "/Applications/Helium.app"
+      "/Applications/ChatGPT Atlas.app"
       "/System/Applications/Messages.app"
-      "/Applications/ChatGPT.app"
       "/System/Applications/Music.app"
       "/System/Applications/Mail.app"
-      "/Applications/Bookends.app"
-      "/Applications/Tower.app"
+      "/Applications/Tapestry.app"
+      "/Applications/Bear.app"
       "/Applications/Ghostty.app"
-      "/Applications/Zed Preview.app"
       "/Applications/Xcode.app"
     ];
     system.defaults.dock.persistent-others = [
