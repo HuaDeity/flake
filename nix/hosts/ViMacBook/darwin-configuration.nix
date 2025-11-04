@@ -34,6 +34,7 @@ in
         "the-ora/ora"
       ];
       brews = [
+        "container"
         "container-compose"
         "hugo"
         "laishulu/homebrew/macism"
@@ -54,7 +55,6 @@ in
         "chatgpt-atlas"
         "cleanshot"
         "claude"
-        "container"
         "downie"
         "festivitas"
         "folder-preview-pro"

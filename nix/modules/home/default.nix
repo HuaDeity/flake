@@ -18,6 +18,18 @@ in
       !include access-tokens.conf
     '';
 
-    home.file.".flox".source = config.lib.file.mkOutOfStoreSymlink floxAbsPath;
+    nix.settings = {
+      substituters = [
+        "https://cache.flox.dev"
+        "https://mirror.sjtu.edu.cn/nix-channels/store"
+        "https://cache.nixos.org"
+      ];
+      trusted-public-keys = [
+        "flox-cache-public-1:7F4OyH7ZCnFhcze3fJdfyXYLQw/aV7GEed86nQ7IsOs="
+        "cache.nixos.org-1:6NCHdD59X431o0gWypbMrAURkbJ16ZPMQFGspcDShjY="
+      ];
+    };
+
+    # home.file.".flox".source = config.lib.file.mkOutOfStoreSymlink floxAbsPath;
   };
 }

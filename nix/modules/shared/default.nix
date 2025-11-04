@@ -23,6 +23,10 @@
       nix.gc.automatic = true;
     }
     // {
-      pkgflow.manifestFile = "${inputs.self}/${config.self.floxDir}/env/manifest.toml";
+      pkgflow.manifestFiles = [ "${inputs.self}/${config.self.floxDir}/env/manifest.toml" ];
+      pkgflow.pkgs.nixpkgs = [
+        "home"
+        "brew"
+      ];
     };
 }

@@ -9,6 +9,6 @@
   ];
 
   config = {
-    pkgflow.caches.enable = true;
+    pkgflow.substituters.enable = true;
   };
 }
