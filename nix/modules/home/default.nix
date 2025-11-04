@@ -9,6 +9,7 @@ in
 {
   imports = [
     inputs.self.modules.shared.default
+    inputs.pkgflow.homeModules.pkgflow
   ];
 
   config = {
@@ -18,17 +19,7 @@ in
       !include access-tokens.conf
     '';
 
-    nix.settings = {
-      substituters = [
-        "https://cache.flox.dev"
-        "https://mirror.sjtu.edu.cn/nix-channels/store"
-        "https://cache.nixos.org"
-      ];
-      trusted-public-keys = [
-        "flox-cache-public-1:7F4OyH7ZCnFhcze3fJdfyXYLQw/aV7GEed86nQ7IsOs="
-        "cache.nixos.org-1:6NCHdD59X431o0gWypbMrAURkbJ16ZPMQFGspcDShjY="
-      ];
-    };
+    pkgflow.substituters.enable = true;
 
     # home.file.".flox".source = config.lib.file.mkOutOfStoreSymlink floxAbsPath;
   };
