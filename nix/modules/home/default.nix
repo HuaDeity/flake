@@ -19,8 +19,6 @@ in
       !include access-tokens.conf
     '';
 
-    pkgflow.substituters.enable = true;
-
     # home.file.".flox".source = config.lib.file.mkOutOfStoreSymlink floxAbsPath;
   };
 }

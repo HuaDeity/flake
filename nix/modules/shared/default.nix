@@ -13,7 +13,8 @@
 
   config =
     let
-      isHomeManager = lib.hasAttrByPath [ "submoduleSupport" "enable" ] options;
+      isHomeManager =
+        lib.hasAttrByPath [ "submoduleSupport" "enable" ] options && options.submoduleSupport.enable;
       hasGc = lib.hasAttrByPath [ "nix" "gc" ] options;
     in
     lib.optionalAttrs (!isHomeManager) {
