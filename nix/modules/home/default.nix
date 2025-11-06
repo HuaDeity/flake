@@ -19,6 +19,8 @@ in
       !include access-tokens.conf
     '';
 
+    programs.home-manager.enable = true;
+
     # home.file.".flox".source = config.lib.file.mkOutOfStoreSymlink floxAbsPath;
   };
 }

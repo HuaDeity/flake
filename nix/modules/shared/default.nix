@@ -13,21 +13,27 @@
 
   config =
     let
-      isHomeManager =
-        lib.hasAttrByPath [ "submoduleSupport" "enable" ] options && options.submoduleSupport.enable;
+      isHomeManager = lib.hasAttrByPath [ "submoduleSupport" "enable" ] options;
       hasGc = lib.hasAttrByPath [ "nix" "gc" ] options;
     in
-    lib.optionalAttrs (!isHomeManager) {
-      nix.package = pkgs.nix;
-    }
-    // lib.optionalAttrs (!isHomeManager && hasGc) {
-      nix.gc.automatic = true;
-    }
-    // {
-      pkgflow.manifestFiles = [ "${inputs.self}/${config.self.floxDir}/env/manifest.toml" ];
-      pkgflow.pkgs.nixpkgs = [
-        "home"
-        "brew"
-      ];
-    };
+    lib.mkMerge [
+      # Conditional nix.package based on submoduleSupport
+      (lib.mkIf (!isHomeManager || !config.submoduleSupport.enable) {
+        nix.package = pkgs.nix;
+      })
+
+      # Conditional nix.gc
+      (lib.mkIf ((!isHomeManager || !config.submoduleSupport.enable) && hasGc) {
+        nix.gc.automatic = true;
+      })
+
+      # Always applied config
+      {
+        pkgflow.manifestFiles = [ "${inputs.self}/${config.self.floxDir}/env/manifest.toml" ];
+        pkgflow.pkgs.nixpkgs = [
+          "home"
+          "brew"
+        ];
+      }
+    ];
 }
