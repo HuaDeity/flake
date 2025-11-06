@@ -13,7 +13,7 @@
       };
       floxDir = lib.mkOption {
         type = lib.types.str;
-        default = "nix/modules/home/.flox";
+        default = "nix/modules/home/flox";
         description = "Relative path to the flox directory";
         readOnly = true;
       };

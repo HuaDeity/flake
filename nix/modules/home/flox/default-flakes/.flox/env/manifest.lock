@@ -1,0 +1,399 @@
+{
+  "lockfile-version": 1,
+  "manifest": {
+    "version": 1,
+    "install": {
+      "helix": {
+        "flake": "github:helix-editor/helix"
+      },
+      "mcp-hub": {
+        "flake": "github:ravitemer/mcp-hub"
+      },
+      "neovim-nightly-overlay": {
+        "flake": "github:nix-community/neovim-nightly-overlay"
+      },
+      "nix-gl-host": {
+        "flake": "github:arilotter/nix-gl-host-rs",
+        "systems": [
+          "aarch64-linux",
+          "x86_64-linux"
+        ]
+      }
+    },
+    "hook": {},
+    "profile": {},
+    "options": {
+      "activate": {
+        "mode": "run"
+      }
+    }
+  },
+  "packages": [
+    {
+      "install_id": "helix",
+      "locked-url": "github:helix-editor/helix/663c9d42f8ebcaaf6036e9b17d54c7d2eda92065?narHash=sha256-ueW%2BbADbMgGMYNSZYqK0bTOIvPqPCokDyKPfq2pz9IQ%3D",
+      "flake-description": "A post-modern text editor.",
+      "locked-flake-attr-path": "packages.aarch64-darwin.default",
+      "derivation": "/nix/store/9f9hqfgjrazgwy6gd6ddj4f8wbjqa9bj-helix-term.drv",
+      "outputs": {
+        "out": "/nix/store/cbprwd1wznbaqxcdqr7ndl8vvia5pdcd-helix-term"
+      },
+      "output-names": [
+        "out"
+      ],
+      "outputs-to-install": [
+        "out"
+      ],
+      "requested-outputs-to-install": [],
+      "package-system": "aarch64-darwin",
+      "system": "aarch64-darwin",
+      "name": "helix-term",
+      "broken": false,
+      "unfree": false,
+      "priority": 5
+    },
+    {
+      "install_id": "helix",
+      "locked-url": "github:helix-editor/helix/663c9d42f8ebcaaf6036e9b17d54c7d2eda92065?narHash=sha256-ueW%2BbADbMgGMYNSZYqK0bTOIvPqPCokDyKPfq2pz9IQ%3D",
+      "flake-description": "A post-modern text editor.",
+      "locked-flake-attr-path": "packages.aarch64-linux.default",
+      "derivation": "/nix/store/zyqlhri52wbh37cvf3n90wrra9cjq8wc-helix-term.drv",
+      "outputs": {
+        "out": "/nix/store/9dn4p8nbhiphym7fdz8jz4h1j051z881-helix-term"
+      },
+      "output-names": [
+        "out"
+      ],
+      "outputs-to-install": [
+        "out"
+      ],
+      "requested-outputs-to-install": [],
+      "package-system": "aarch64-linux",
+      "system": "aarch64-linux",
+      "name": "helix-term",
+      "broken": false,
+      "unfree": false,
+      "priority": 5
+    },
+    {
+      "install_id": "helix",
+      "locked-url": "github:helix-editor/helix/663c9d42f8ebcaaf6036e9b17d54c7d2eda92065?narHash=sha256-ueW%2BbADbMgGMYNSZYqK0bTOIvPqPCokDyKPfq2pz9IQ%3D",
+      "flake-description": "A post-modern text editor.",
+      "locked-flake-attr-path": "packages.x86_64-darwin.default",
+      "derivation": "/nix/store/ja134yc7kqnaiygmrwll31cs2241d9za-helix-term.drv",
+      "outputs": {
+        "out": "/nix/store/fbr0yljkm5yb9091qb6db7c7sby2l582-helix-term"
+      },
+      "output-names": [
+        "out"
+      ],
+      "outputs-to-install": [
+        "out"
+      ],
+      "requested-outputs-to-install": [],
+      "package-system": "x86_64-darwin",
+      "system": "x86_64-darwin",
+      "name": "helix-term",
+      "broken": false,
+      "unfree": false,
+      "priority": 5
+    },
+    {
+      "install_id": "helix",
+      "locked-url": "github:helix-editor/helix/663c9d42f8ebcaaf6036e9b17d54c7d2eda92065?narHash=sha256-ueW%2BbADbMgGMYNSZYqK0bTOIvPqPCokDyKPfq2pz9IQ%3D",
+      "flake-description": "A post-modern text editor.",
+      "locked-flake-attr-path": "packages.x86_64-linux.default",
+      "derivation": "/nix/store/idkyg388diy8b63wkr4m77qingsaasgg-helix-term.drv",
+      "outputs": {
+        "out": "/nix/store/x50n235y5031bq8cmzh7kd6wik1ngyf7-helix-term"
+      },
+      "output-names": [
+        "out"
+      ],
+      "outputs-to-install": [
+        "out"
+      ],
+      "requested-outputs-to-install": [],
+      "package-system": "x86_64-linux",
+      "system": "x86_64-linux",
+      "name": "helix-term",
+      "broken": false,
+      "unfree": false,
+      "priority": 5
+    },
+    {
+      "install_id": "mcp-hub",
+      "locked-url": "github:ravitemer/mcp-hub/9c7670a4c341ed3cf738a6242c0fde1cea40bccf?narHash=sha256-KakvXZf0vjdqzyT%2BLsAKHEr4GLICGXPmxl1hZ3tI7Yg%3D",
+      "flake-description": "A manager server for MCP servers that handles process management and tool routing",
+      "locked-flake-attr-path": "packages.aarch64-darwin.default",
+      "derivation": "/nix/store/mbavn1npvabjli89icg3p5ly9rd3kj6v-mcp-hub-4.2.1.drv",
+      "outputs": {
+        "out": "/nix/store/ifli9ap04gh6yh4n4fzwdlcavyw1k024-mcp-hub-4.2.1"
+      },
+      "output-names": [
+        "out"
+      ],
+      "outputs-to-install": [
+        "out"
+      ],
+      "requested-outputs-to-install": [],
+      "package-system": "aarch64-darwin",
+      "system": "aarch64-darwin",
+      "name": "mcp-hub-4.2.1",
+      "pname": "mcp-hub",
+      "version": "4.2.1",
+      "broken": false,
+      "unfree": false,
+      "priority": 5
+    },
+    {
+      "install_id": "mcp-hub",
+      "locked-url": "github:ravitemer/mcp-hub/9c7670a4c341ed3cf738a6242c0fde1cea40bccf?narHash=sha256-KakvXZf0vjdqzyT%2BLsAKHEr4GLICGXPmxl1hZ3tI7Yg%3D",
+      "flake-description": "A manager server for MCP servers that handles process management and tool routing",
+      "locked-flake-attr-path": "packages.aarch64-linux.default",
+      "derivation": "/nix/store/nm7qiklfkjrx8vx6drwbqrv418p6ilav-mcp-hub-4.2.1.drv",
+      "outputs": {
+        "out": "/nix/store/5pr55wcb64zaflqrqigyak8vs9nsiiv3-mcp-hub-4.2.1"
+      },
+      "output-names": [
+        "out"
+      ],
+      "outputs-to-install": [
+        "out"
+      ],
+      "requested-outputs-to-install": [],
+      "package-system": "aarch64-linux",
+      "system": "aarch64-linux",
+      "name": "mcp-hub-4.2.1",
+      "pname": "mcp-hub",
+      "version": "4.2.1",
+      "broken": false,
+      "unfree": false,
+      "priority": 5
+    },
+    {
+      "install_id": "mcp-hub",
+      "locked-url": "github:ravitemer/mcp-hub/9c7670a4c341ed3cf738a6242c0fde1cea40bccf?narHash=sha256-KakvXZf0vjdqzyT%2BLsAKHEr4GLICGXPmxl1hZ3tI7Yg%3D",
+      "flake-description": "A manager server for MCP servers that handles process management and tool routing",
+      "locked-flake-attr-path": "packages.x86_64-darwin.default",
+      "derivation": "/nix/store/4cb7znxbw843d7qshyhdivcv093pdrck-mcp-hub-4.2.1.drv",
+      "outputs": {
+        "out": "/nix/store/xhajp5ci3mdpvanw30kw2shsp4jgglf6-mcp-hub-4.2.1"
+      },
+      "output-names": [
+        "out"
+      ],
+      "outputs-to-install": [
+        "out"
+      ],
+      "requested-outputs-to-install": [],
+      "package-system": "x86_64-darwin",
+      "system": "x86_64-darwin",
+      "name": "mcp-hub-4.2.1",
+      "pname": "mcp-hub",
+      "version": "4.2.1",
+      "broken": false,
+      "unfree": false,
+      "priority": 5
+    },
+    {
+      "install_id": "mcp-hub",
+      "locked-url": "github:ravitemer/mcp-hub/9c7670a4c341ed3cf738a6242c0fde1cea40bccf?narHash=sha256-KakvXZf0vjdqzyT%2BLsAKHEr4GLICGXPmxl1hZ3tI7Yg%3D",
+      "flake-description": "A manager server for MCP servers that handles process management and tool routing",
+      "locked-flake-attr-path": "packages.x86_64-linux.default",
+      "derivation": "/nix/store/jy0iqj32i3f8zp8jy4b8if3s8k3y80r8-mcp-hub-4.2.1.drv",
+      "outputs": {
+        "out": "/nix/store/bkfrl0hjmrzxpna01d88yq5wavvbg9cb-mcp-hub-4.2.1"
+      },
+      "output-names": [
+        "out"
+      ],
+      "outputs-to-install": [
+        "out"
+      ],
+      "requested-outputs-to-install": [],
+      "package-system": "x86_64-linux",
+      "system": "x86_64-linux",
+      "name": "mcp-hub-4.2.1",
+      "pname": "mcp-hub",
+      "version": "4.2.1",
+      "broken": false,
+      "unfree": false,
+      "priority": 5
+    },
+    {
+      "install_id": "neovim-nightly-overlay",
+      "locked-url": "github:nix-community/neovim-nightly-overlay/b5d560fa4ee4f2e0789215de9e089fbab9d0e44a?narHash=sha256-/BJTnu8R12gY1ukPlSLuNmRZqVj2g%2Bci/DGLOTmUG4g%3D",
+      "flake-description": "Neovim flake",
+      "locked-flake-attr-path": "packages.aarch64-darwin.default",
+      "derivation": "/nix/store/ficnivmmwdafp8i9rahaz0hmwjan2cgw-neovim-unwrapped-nightly.drv",
+      "outputs": {
+        "out": "/nix/store/7i6lch6l6flv3cm7k2iwlc69jma26azx-neovim-unwrapped-nightly"
+      },
+      "output-names": [
+        "out"
+      ],
+      "outputs-to-install": [
+        "out"
+      ],
+      "requested-outputs-to-install": [],
+      "package-system": "aarch64-darwin",
+      "system": "aarch64-darwin",
+      "name": "neovim-unwrapped-nightly",
+      "pname": "neovim-unwrapped",
+      "version": "nightly",
+      "description": "Vim text editor fork focused on extensibility and agility",
+      "licenses": [
+        "Apache-2.0",
+        "Vim"
+      ],
+      "broken": false,
+      "unfree": false,
+      "priority": 5
+    },
+    {
+      "install_id": "neovim-nightly-overlay",
+      "locked-url": "github:nix-community/neovim-nightly-overlay/b5d560fa4ee4f2e0789215de9e089fbab9d0e44a?narHash=sha256-/BJTnu8R12gY1ukPlSLuNmRZqVj2g%2Bci/DGLOTmUG4g%3D",
+      "flake-description": "Neovim flake",
+      "locked-flake-attr-path": "packages.aarch64-linux.default",
+      "derivation": "/nix/store/jmc6sq1bkxymc614lzbc9r1yyndgxh9a-neovim-unwrapped-nightly.drv",
+      "outputs": {
+        "debug": "/nix/store/bia7d7r1a8inlakaykp3i01imig6b5nh-neovim-unwrapped-nightly-debug",
+        "out": "/nix/store/hjc6b7g5gg712cv559z2bknbx5xcax05-neovim-unwrapped-nightly"
+      },
+      "output-names": [
+        "out",
+        "debug"
+      ],
+      "outputs-to-install": [
+        "out"
+      ],
+      "requested-outputs-to-install": [],
+      "package-system": "aarch64-linux",
+      "system": "aarch64-linux",
+      "name": "neovim-unwrapped-nightly",
+      "pname": "neovim-unwrapped",
+      "version": "nightly",
+      "description": "Vim text editor fork focused on extensibility and agility",
+      "licenses": [
+        "Apache-2.0",
+        "Vim"
+      ],
+      "broken": false,
+      "unfree": false,
+      "priority": 5
+    },
+    {
+      "install_id": "neovim-nightly-overlay",
+      "locked-url": "github:nix-community/neovim-nightly-overlay/b5d560fa4ee4f2e0789215de9e089fbab9d0e44a?narHash=sha256-/BJTnu8R12gY1ukPlSLuNmRZqVj2g%2Bci/DGLOTmUG4g%3D",
+      "flake-description": "Neovim flake",
+      "locked-flake-attr-path": "packages.x86_64-darwin.default",
+      "derivation": "/nix/store/fmn0d1gkv44qy621plw8mm51r5vg33hx-neovim-unwrapped-nightly.drv",
+      "outputs": {
+        "out": "/nix/store/pig7zlp7d6hw8lnfwp6va6d95zg8mrkw-neovim-unwrapped-nightly"
+      },
+      "output-names": [
+        "out"
+      ],
+      "outputs-to-install": [
+        "out"
+      ],
+      "requested-outputs-to-install": [],
+      "package-system": "x86_64-darwin",
+      "system": "x86_64-darwin",
+      "name": "neovim-unwrapped-nightly",
+      "pname": "neovim-unwrapped",
+      "version": "nightly",
+      "description": "Vim text editor fork focused on extensibility and agility",
+      "licenses": [
+        "Apache-2.0",
+        "Vim"
+      ],
+      "broken": false,
+      "unfree": false,
+      "priority": 5
+    },
+    {
+      "install_id": "neovim-nightly-overlay",
+      "locked-url": "github:nix-community/neovim-nightly-overlay/b5d560fa4ee4f2e0789215de9e089fbab9d0e44a?narHash=sha256-/BJTnu8R12gY1ukPlSLuNmRZqVj2g%2Bci/DGLOTmUG4g%3D",
+      "flake-description": "Neovim flake",
+      "locked-flake-attr-path": "packages.x86_64-linux.default",
+      "derivation": "/nix/store/gagnj4sp44kmacfx5pv8lry5xgfr08hk-neovim-unwrapped-nightly.drv",
+      "outputs": {
+        "debug": "/nix/store/anbkj014qcsmz3anb9k5ij6h5c3xd6g5-neovim-unwrapped-nightly-debug",
+        "out": "/nix/store/pwkskz4w5frikbq4x6j6fkz0mvqv4iz3-neovim-unwrapped-nightly"
+      },
+      "output-names": [
+        "out",
+        "debug"
+      ],
+      "outputs-to-install": [
+        "out"
+      ],
+      "requested-outputs-to-install": [],
+      "package-system": "x86_64-linux",
+      "system": "x86_64-linux",
+      "name": "neovim-unwrapped-nightly",
+      "pname": "neovim-unwrapped",
+      "version": "nightly",
+      "description": "Vim text editor fork focused on extensibility and agility",
+      "licenses": [
+        "Apache-2.0",
+        "Vim"
+      ],
+      "broken": false,
+      "unfree": false,
+      "priority": 5
+    },
+    {
+      "install_id": "nix-gl-host",
+      "locked-url": "github:arilotter/nix-gl-host-rs/481be0dddb2d71ff6a4452adff5e7fbbb465d4c1?narHash=sha256-9ZBPJrE8w6eUHRw%2BACQZMyKJlEuqS/meMTTX8A6Pdyw%3D",
+      "flake-description": "Gluing host OpenGL drivers to a Nix-built binary",
+      "locked-flake-attr-path": "packages.aarch64-linux.default",
+      "derivation": "/nix/store/3aivvzkkb5lin9x5v55gsb35ndpqbrhs-nixglhost-0.1.0.drv",
+      "outputs": {
+        "out": "/nix/store/v0pfwkqzngnnz94fy9zy5bggh1876x38-nixglhost-0.1.0"
+      },
+      "output-names": [
+        "out"
+      ],
+      "outputs-to-install": [
+        "out"
+      ],
+      "requested-outputs-to-install": [],
+      "package-system": "aarch64-linux",
+      "system": "aarch64-linux",
+      "name": "nixglhost-0.1.0",
+      "pname": "nixglhost",
+      "version": "0.1.0",
+      "broken": false,
+      "unfree": false,
+      "priority": 5
+    },
+    {
+      "install_id": "nix-gl-host",
+      "locked-url": "github:arilotter/nix-gl-host-rs/481be0dddb2d71ff6a4452adff5e7fbbb465d4c1?narHash=sha256-9ZBPJrE8w6eUHRw%2BACQZMyKJlEuqS/meMTTX8A6Pdyw%3D",
+      "flake-description": "Gluing host OpenGL drivers to a Nix-built binary",
+      "locked-flake-attr-path": "packages.x86_64-linux.default",
+      "derivation": "/nix/store/35wk2j2sc96z3a6w5rd2v5ss6nh43fyc-nixglhost-0.1.0.drv",
+      "outputs": {
+        "out": "/nix/store/lxcfrrplyf9k77a5dipzhsnpxik0ba6i-nixglhost-0.1.0"
+      },
+      "output-names": [
+        "out"
+      ],
+      "outputs-to-install": [
+        "out"
+      ],
+      "requested-outputs-to-install": [],
+      "package-system": "x86_64-linux",
+      "system": "x86_64-linux",
+      "name": "nixglhost-0.1.0",
+      "pname": "nixglhost",
+      "version": "0.1.0",
+      "broken": false,
+      "unfree": false,
+      "priority": 5
+    }
+  ]
+}

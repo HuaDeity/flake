@@ -29,9 +29,10 @@
 
       # Always applied config
       {
-        pkgflow.manifestFiles = [ "${inputs.self}/${config.self.floxDir}/env/manifest.toml" ];
+        pkgflow.manifestFiles = [
+          "${inputs.self}/${config.self.floxDir}/default/.flox/env/manifest.toml"
+        ];
         pkgflow.pkgs.nixpkgs = [
-          "home"
           "brew"
         ];
       }

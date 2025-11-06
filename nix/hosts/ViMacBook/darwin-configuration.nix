@@ -36,6 +36,7 @@ in
       brews = [
         "container"
         "container-compose"
+        "fish"
         "hugo"
         "laishulu/homebrew/macism"
         "mas"

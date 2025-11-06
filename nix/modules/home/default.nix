@@ -1,11 +1,7 @@
 {
-  config,
   inputs,
   ...
 }:
-let
-  floxAbsPath = "${config.home.homeDirectory}/${config.self.flakeDir}/${config.self.floxDir}";
-in
 {
   imports = [
     inputs.self.modules.shared.default
@@ -20,7 +16,5 @@ in
     '';
 
     programs.home-manager.enable = true;
-
-    # home.file.".flox".source = config.lib.file.mkOutOfStoreSymlink floxAbsPath;
   };
 }
