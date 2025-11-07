@@ -20,6 +20,7 @@ helix.flake = "github:helix-editor/helix"
 mcp-hub.flake = "github:ravitemer/mcp-hub"
 nix-gl-host.flake = "github:arilotter/nix-gl-host-rs"
 nix-gl-host.systems = ["aarch64-linux", "x86_64-linux"]
+nix-auth.flake = "github:numtide/nix-auth"
 # gum.pkg-path = "gum"
 # gum.version = "^0.14.5"
 

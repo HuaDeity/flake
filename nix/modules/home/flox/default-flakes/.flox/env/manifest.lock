@@ -12,6 +12,9 @@
       "neovim-nightly-overlay": {
         "flake": "github:nix-community/neovim-nightly-overlay"
       },
+      "nix-auth": {
+        "flake": "github:numtide/nix-auth"
+      },
       "nix-gl-host": {
         "flake": "github:arilotter/nix-gl-host-rs",
         "systems": [
@@ -391,6 +394,122 @@
       "name": "nixglhost-0.1.0",
       "pname": "nixglhost",
       "version": "0.1.0",
+      "broken": false,
+      "unfree": false,
+      "priority": 5
+    },
+    {
+      "install_id": "nix-auth",
+      "locked-url": "github:numtide/nix-auth/a75e08a3083ebe40dabfa2f463caab86ef78ecfa?narHash=sha256-epsg%2BelWnZoPjFV/hc113j%2BJGuxL/ggcEmJJv%2BNiajo%3D",
+      "flake-description": "CLI tool to manage access tokens for Nix",
+      "locked-flake-attr-path": "packages.aarch64-darwin.default",
+      "derivation": "/nix/store/0rf00pac8lq0wkb7xaql243lh0klmi9v-nix-auth-0.1.0.drv",
+      "outputs": {
+        "out": "/nix/store/805126h2q53fkl5zw4vn3pggfysz4gqz-nix-auth-0.1.0"
+      },
+      "output-names": [
+        "out"
+      ],
+      "outputs-to-install": [
+        "out"
+      ],
+      "requested-outputs-to-install": [],
+      "package-system": "aarch64-darwin",
+      "system": "aarch64-darwin",
+      "name": "nix-auth-0.1.0",
+      "pname": "nix-auth",
+      "version": "0.1.0",
+      "description": "CLI tool to manage access tokens for Nix",
+      "licenses": [
+        "MIT"
+      ],
+      "broken": false,
+      "unfree": false,
+      "priority": 5
+    },
+    {
+      "install_id": "nix-auth",
+      "locked-url": "github:numtide/nix-auth/a75e08a3083ebe40dabfa2f463caab86ef78ecfa?narHash=sha256-epsg%2BelWnZoPjFV/hc113j%2BJGuxL/ggcEmJJv%2BNiajo%3D",
+      "flake-description": "CLI tool to manage access tokens for Nix",
+      "locked-flake-attr-path": "packages.aarch64-linux.default",
+      "derivation": "/nix/store/p6yimjh87vp3ry2hrkh4qmdj2l7h0l6k-nix-auth-0.1.0.drv",
+      "outputs": {
+        "out": "/nix/store/6j0njxdhhjfxwh1q4yfiwmmikxlbbphc-nix-auth-0.1.0"
+      },
+      "output-names": [
+        "out"
+      ],
+      "outputs-to-install": [
+        "out"
+      ],
+      "requested-outputs-to-install": [],
+      "package-system": "aarch64-linux",
+      "system": "aarch64-linux",
+      "name": "nix-auth-0.1.0",
+      "pname": "nix-auth",
+      "version": "0.1.0",
+      "description": "CLI tool to manage access tokens for Nix",
+      "licenses": [
+        "MIT"
+      ],
+      "broken": false,
+      "unfree": false,
+      "priority": 5
+    },
+    {
+      "install_id": "nix-auth",
+      "locked-url": "github:numtide/nix-auth/a75e08a3083ebe40dabfa2f463caab86ef78ecfa?narHash=sha256-epsg%2BelWnZoPjFV/hc113j%2BJGuxL/ggcEmJJv%2BNiajo%3D",
+      "flake-description": "CLI tool to manage access tokens for Nix",
+      "locked-flake-attr-path": "packages.x86_64-darwin.default",
+      "derivation": "/nix/store/wpgvzbi8m85947g6p4wwayp3a3zdyhgc-nix-auth-0.1.0.drv",
+      "outputs": {
+        "out": "/nix/store/dx3arl4bk9dpk4n018ablx8nf3pggwik-nix-auth-0.1.0"
+      },
+      "output-names": [
+        "out"
+      ],
+      "outputs-to-install": [
+        "out"
+      ],
+      "requested-outputs-to-install": [],
+      "package-system": "x86_64-darwin",
+      "system": "x86_64-darwin",
+      "name": "nix-auth-0.1.0",
+      "pname": "nix-auth",
+      "version": "0.1.0",
+      "description": "CLI tool to manage access tokens for Nix",
+      "licenses": [
+        "MIT"
+      ],
+      "broken": false,
+      "unfree": false,
+      "priority": 5
+    },
+    {
+      "install_id": "nix-auth",
+      "locked-url": "github:numtide/nix-auth/a75e08a3083ebe40dabfa2f463caab86ef78ecfa?narHash=sha256-epsg%2BelWnZoPjFV/hc113j%2BJGuxL/ggcEmJJv%2BNiajo%3D",
+      "flake-description": "CLI tool to manage access tokens for Nix",
+      "locked-flake-attr-path": "packages.x86_64-linux.default",
+      "derivation": "/nix/store/pqz6k6qgys6c4qvf5dd4jj1s7154y7gp-nix-auth-0.1.0.drv",
+      "outputs": {
+        "out": "/nix/store/swyf84wqjnr8wfrnxwnbmzdyq4pd12pq-nix-auth-0.1.0"
+      },
+      "output-names": [
+        "out"
+      ],
+      "outputs-to-install": [
+        "out"
+      ],
+      "requested-outputs-to-install": [],
+      "package-system": "x86_64-linux",
+      "system": "x86_64-linux",
+      "name": "nix-auth-0.1.0",
+      "pname": "nix-auth",
+      "version": "0.1.0",
+      "description": "CLI tool to manage access tokens for Nix",
+      "licenses": [
+        "MIT"
+      ],
       "broken": false,
       "unfree": false,
       "priority": 5
