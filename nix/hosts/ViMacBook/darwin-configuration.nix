@@ -60,6 +60,7 @@ in
         "festivitas"
         "folder-preview-pro"
         "font-monaspace-var"
+        "font-sarasa-gothic"
         "font-symbols-only-nerd-font"
         "ghostty"
         "gpg-suite@nightly"
@@ -70,7 +71,6 @@ in
         "kaleidoscope"
         "keka"
         "kekaexternalhelper"
-        "libreoffice"
         "macupdater"
         "marked-app"
         "onyx"
@@ -100,76 +100,76 @@ in
         "xscope"
         "zed@preview"
       ];
-      masApps = {
-        "Actions" = 1586435171;
-        "Bear" = 1091189122;
-        "Bob" = 1630034110;
-        "Cardhop" = 1290358394;
-        "Compressor" = 424390742;
-        "Craft" = 1487937127;
-        "Developer" = 640199958;
-        "Dice by PCalc" = 1479250666;
-        "Dynamic Lyrics" = 6476125287;
-        "Fantastical" = 975937182;
-        "FilmNoir" = 1528417240;
-        "Final Cut Pro" = 424389933;
-        "Flighty" = 1358823008;
-        "GarageBand" = 682658836;
-        "GoodLinks" = 1474335294;
-        "HextEdit" = 1557247094;
-        "Highlights" = 1498912833;
-        "iA Writer" = 775737590;
-        "iMovie" = 408981434;
-        "Infuse" = 1136220934;
-        "Just Press Record" = 1033342465;
-        "Kagi for Safari" = 1622835804;
-        "Keynote" = 409183694;
-        "Kindle" = 302584613;
-        "Logic Pro" = 634148309;
-        "LookUp" = 872564448;
-        "MainStage" = 634159523;
-        "Maipo" = 789066512;
-        "Mercury" = 1621800675;
-        "MindNode Next" = 6446116532;
-        # "Mona 7 for Mastodon" = 0;
-        "Motion" = 434290957;
-        "MusicBox" = 1614730313;
-        "MusicHarbor" = 1440405750;
-        "MusicSmart" = 1512195368;
-        "Night Sky" = 475772902;
-        "Noir" = 1592917505;
-        "Numbers" = 409203825;
-        "Pages" = 409201541;
-        "Photomator" = 1444636541;
-        "Pinning" = 6472634746;
-        "Pixelmator Pro" = 1289583905;
-        "Pizza Helper" = 1635319193;
-        "Play" = 1596506190;
-        "Prompt" = 1594420480;
-        "Pure Paste" = 1611378436;
-        "Reeder" = 6475002485;
-        "Screens 5" = 1663047912;
-        "Shareful" = 1522267256;
-        "Shazam" = 897118787;
-        "Sketch" = 1667260533;
-        "SnippetsLab" = 1006087419;
-        "StopTheMadness Pro" = 6471380298;
-        "Streaks" = 963034692;
-        "SubManager" = 1632853914;
-        "Tampermonkey" = 6738342400;
-        "Tapestry" = 6448078074;
-        "TestFlight" = 899247664;
-        "Tot" = 1491071483;
-        "Tripsy" = 1429967544;
-        "Turn Off the Lights for Safari" = 1273998507;
-        "Velja" = 1607635845;
-        "WaterMinder" = 1415257369;
-        "Wayback Machine" = 1472432422;
-        "Wipr" = 1662217862;
-        "Xcode" = 497799835;
-        "爱奇艺" = 1012296988;
-        "腾讯视频" = 1231336508;
-      };
+      # masApps = {
+      #   "Actions" = 1586435171;
+      #   "Bear" = 1091189122;
+      #   "Bob" = 1630034110;
+      #   "Cardhop" = 1290358394;
+      #   "Compressor" = 424390742;
+      #   "Craft" = 1487937127;
+      #   "Developer" = 640199958;
+      #   "Dice by PCalc" = 1479250666;
+      #   "Dynamic Lyrics" = 6476125287;
+      #   "Fantastical" = 975937182;
+      #   "FilmNoir" = 1528417240;
+      #   "Final Cut Pro" = 424389933;
+      #   "Flighty" = 1358823008;
+      #   "GarageBand" = 682658836;
+      #   "GoodLinks" = 1474335294;
+      #   "HextEdit" = 1557247094;
+      #   "Highlights" = 1498912833;
+      #   "iA Writer" = 775737590;
+      #   "iMovie" = 408981434;
+      #   "Infuse" = 1136220934;
+      #   "Just Press Record" = 1033342465;
+      #   "Kagi for Safari" = 1622835804;
+      #   "Keynote" = 409183694;
+      #   "Kindle" = 302584613;
+      #   "Logic Pro" = 634148309;
+      #   "LookUp" = 872564448;
+      #   "MainStage" = 634159523;
+      #   "Maipo" = 789066512;
+      #   "Mercury" = 1621800675;
+      #   "MindNode Next" = 6446116532;
+      #   # "Mona 7 for Mastodon" = 0;
+      #   "Motion" = 434290957;
+      #   "MusicBox" = 1614730313;
+      #   "MusicHarbor" = 1440405750;
+      #   "MusicSmart" = 1512195368;
+      #   "Night Sky" = 475772902;
+      #   "Noir" = 1592917505;
+      #   "Numbers" = 409203825;
+      #   "Pages" = 409201541;
+      #   "Photomator" = 1444636541;
+      #   "Pinning" = 6472634746;
+      #   "Pixelmator Pro" = 1289583905;
+      #   "Pizza Helper" = 1635319193;
+      #   "Play" = 1596506190;
+      #   "Prompt" = 1594420480;
+      #   "Pure Paste" = 1611378436;
+      #   "Reeder" = 6475002485;
+      #   "Screens 5" = 1663047912;
+      #   "Shareful" = 1522267256;
+      #   "Shazam" = 897118787;
+      #   "Sketch" = 1667260533;
+      #   "SnippetsLab" = 1006087419;
+      #   "StopTheMadness Pro" = 6471380298;
+      #   "Streaks" = 963034692;
+      #   "SubManager" = 1632853914;
+      #   "Tampermonkey" = 6738342400;
+      #   "Tapestry" = 6448078074;
+      #   "TestFlight" = 899247664;
+      #   "Tot" = 1491071483;
+      #   "Tripsy" = 1429967544;
+      #   "Turn Off the Lights for Safari" = 1273998507;
+      #   "Velja" = 1607635845;
+      #   "WaterMinder" = 1415257369;
+      #   "Wayback Machine" = 1472432422;
+      #   "Wipr" = 1662217862;
+      #   "Xcode" = 497799835;
+      #   "爱奇艺" = 1012296988;
+      #   "腾讯视频" = 1231336508;
+      # };
       onActivation = {
         autoUpdate = true;
         cleanup = "zap";

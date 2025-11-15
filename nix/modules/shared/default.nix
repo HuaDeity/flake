@@ -9,6 +9,7 @@
 {
   imports = [
     ./options.nix
+    inputs.flox-manifest-fetch.flakeModules.floxManifests
   ];
 
   config =
@@ -31,12 +32,15 @@
       ))
 
       (lib.optionalAttrs hasPkgflow {
-        pkgflow.manifestFiles = [
-          "${inputs.self}/${config.self.floxDir}/default/.flox/env/manifest.toml"
-        ];
-        pkgflow.pkgs.nixpkgs = [
-          "brew"
-        ];
-      })
+        pkgflow = {
+          pkgs.nixpkgs = [ "brew" ];
+          manifestFiles = map (m: "${inputs.self}/${m}") config.floxManifests.manifests;
+        };
+        floxManifests = {
+          enable = true;
+          environments = [ "default" ];
+          cacheDir = ".flox-manifests";
+        };
+      }
     ];
 }

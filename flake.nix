@@ -25,6 +25,7 @@
     index-database.inputs.nixpkgs.follows = "nixpkgs";
 
     pkgflow.url = "github:HuaDeity/pkgflow";
+    flox-manifest-fetch.url = "github:HuaDeity/flox-manifest-fetch";
   };
 
   outputs =
