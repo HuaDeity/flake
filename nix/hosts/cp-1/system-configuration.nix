@@ -6,7 +6,7 @@
   config = {
     services.kubernetes = {
       roles = [
-        "init"
+        "master"
         "node"
       ];
       kubeadm = {
@@ -17,9 +17,9 @@
       };
     };
 
-    services.harmonia = {
-      enable = true;
-      signKeyPaths = [ "/var/lib/harmonia/cache-priv-key.pem" ];
-    };
+    # services.harmonia = {
+    #   enable = true;
+    #   signKeyPaths = [ "/var/lib/harmonia/cache-priv-key.pem" ];
+    # };
   };
 }

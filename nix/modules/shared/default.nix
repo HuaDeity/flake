@@ -15,6 +15,7 @@
     let
       isHomeManager = lib.hasAttrByPath [ "submoduleSupport" "enable" ] options;
       hasGc = lib.hasAttrByPath [ "nix" "gc" ] options;
+      hasPkgflow = lib.hasAttrByPath [ "pkgflow" ] options;
     in
     lib.mkMerge [
       # Conditional nix.package based on submoduleSupport
@@ -23,18 +24,19 @@
       })
 
       # Conditional nix.gc
-      (lib.mkIf ((!isHomeManager || !config.submoduleSupport.enable) && hasGc) {
-        nix.gc.automatic = true;
-      })
+      (lib.mkIf ((!isHomeManager || !config.submoduleSupport.enable)) (
+        lib.optionalAttrs hasGc {
+          nix.gc.automatic = true;
+        }
+      ))
 
-      # Always applied config
-      {
+      (lib.optionalAttrs hasPkgflow {
         pkgflow.manifestFiles = [
           "${inputs.self}/${config.self.floxDir}/default/.flox/env/manifest.toml"
         ];
         pkgflow.pkgs.nixpkgs = [
           "brew"
         ];
-      }
+      })
     ];
 }
