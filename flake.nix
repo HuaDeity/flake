@@ -8,8 +8,15 @@
 
   inputs = {
     nixpkgs.url = "github:NixOS/nixpkgs/nixpkgs-unstable";
+    flox-nixpkgs.url = "github:flox/nixpkgs/stable";
 
     flox.url = "github:flox/flox/latest";
+    flox.inputs.nixpkgs.follows = "flox-nixpkgs";
+
+    flox-manifest-fetch.url = "github:HuaDeity/flox-manifest-fetch";
+    flox-manifest-fetch.inputs.flox.follows = "flox";
+    flox-manifest-fetch.inputs.nixpkgs.follows = "flox-nixpkgs";
+
     devshell.url = "github:numtide/devshell";
     blueprint.url = "github:numtide/blueprint";
     blueprint.inputs.nixpkgs.follows = "nixpkgs";
@@ -25,7 +32,6 @@
     index-database.inputs.nixpkgs.follows = "nixpkgs";
 
     pkgflow.url = "github:HuaDeity/pkgflow";
-    flox-manifest-fetch.url = "github:HuaDeity/flox-manifest-fetch";
   };
 
   outputs =
