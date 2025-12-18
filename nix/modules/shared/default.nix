@@ -41,6 +41,6 @@
           environments = [ "default" ];
           cacheDir = ".flox-manifests";
         };
-      }
+      })
     ];
 }

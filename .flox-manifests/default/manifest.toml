@@ -58,8 +58,11 @@ vscode-langservers-extracted.pkg-path = "vscode-langservers-extracted"
 wakatime-cli.pkg-path = "wakatime-cli"
 yazi.pkg-path = "yazi"
 zoxide.pkg-path = "zoxide"
-claude-code.pkg-path = "claude-code"
 just.pkg-path = "just"
+claude-code.pkg-path = "claude-code"
+conda.pkg-path = "conda"
+conda.systems = ["aarch64-linux", "x86_64-linux"]
+ghostscript.pkg-path = "ghostscript"
 # gum.pkg-path = "gum"
 # gum.version = "^0.14.5"
 
