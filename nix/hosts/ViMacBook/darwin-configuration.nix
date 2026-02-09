@@ -31,146 +31,122 @@ in
         "huadeity/tap"
         "laishulu/homebrew"
         "nrlquaker/createzap"
-        "the-ora/ora"
       ];
       brews = [
         "container"
         "container-compose"
         "fish"
-        "git-xet"
         "hugo"
-        "laishulu/homebrew/macism"
+        "macism"
         "mas"
-        "hakonharnes/tap/pbctl"
+        "pbctl"
         "pinentry-mac"
         "tag"
         "tex-fmt"
         "texlab"
       ];
       casks = [
-        "affinity"
         "aldente"
+        "antinote"
         "apparency"
         "archaeology"
         "basictex"
         "bettertouchtool"
-        "bookends"
-        "calibre"
-        "chatgpt-atlas"
-        "cleanshot"
         "claude"
-        "discord"
+        "cleanshot"
+        "crossover"
         "downie"
-        "festivitas"
+        "drawio"
         "folder-preview-pro"
-        "font-monaspace-var"
-        "font-sarasa-gothic"
-        "font-sf-mono"
-        "font-symbols-only-nerd-font"
+        "font-commit-mono-nerd-font"
         "ghostty"
-        "gpg-suite@nightly"
+        "hazeover"
         "helium-browser"
-        "ia-markdown-dictionary"
-        "ia-presenter"
         "istat-menus"
         "kaleidoscope"
         "keka"
         "kekaexternalhelper"
-        "macupdater"
-        "marked-app"
         "onyx"
-        "orbstack"
-        "parallels"
         "pearcleaner"
         "permute"
-        "playcover-community"
         "popclip"
-        "qlmarkdown"
         "qlvideo"
-        "qq"
         "rar"
         "raycast"
         "secretive"
         "sf-symbols"
         "shortcutie"
         "skim"
-        "smash-smash"
+        "sleeve"
         "spotify"
-        "steermouse"
         "supercharge"
         "surge"
         "suspicious-package"
         "syntax-highlight"
-        "tencent-meeting"
         "tower"
-        "xscope"
+        "vesktop"
         "zed@preview"
+        "zotero"
       ];
       masApps = {
         "Actions" = 1586435171;
+        "Anybox" = 1593408455;
         "Bear" = 1091189122;
         "Bob" = 1630034110;
         "Cardhop" = 1290358394;
-        "Compressor" = 424390742;
+        "Compressor" = 6746516157;
         "Craft" = 1487937127;
         "Developer" = 640199958;
         "Dice by PCalc" = 1479250666;
-        "Dynamic Lyrics" = 6476125287;
         "Fantastical" = 975937182;
-        "FilmNoir" = 1528417240;
-        "Final Cut Pro" = 424389933;
+        "Final Cut Pro" = 1631624924;
         "Flighty" = 1358823008;
-        "GarageBand" = 682658836;
         "GoodLinks" = 1474335294;
-        "HextEdit" = 1557247094;
-        "Highlights" = 1498912833;
-        "iA Writer" = 775737590;
-        "iMovie" = 408981434;
         "Infuse" = 1136220934;
-        "Just Press Record" = 1033342465;
         "Kagi for Safari" = 1622835804;
-        "Keynote" = 409183694;
+        "Keynote" = 361285480;
         "Kindle" = 302584613;
-        "Logic Pro" = 634148309;
+        "Logic Pro" = 1615087040;
         "LookUp" = 872564448;
-        "MainStage" = 634159523;
+        "MainStage" = 6746637089;
         "Maipo" = 789066512;
-        "Mercury" = 1621800675;
-        "MindNode Next" = 6446116532;
-        # "Mona 7 for Mastodon" = 0;
-        "Motion" = 434290957;
+        "Markdown Preview" = 6739955340;
+        # "Marked 3" = 0;
+        "Microsoft Excel" = 462058435;
+        "Microsoft PowerPoint" = 462062816;
+        "Microsoft Word" = 462054704;
+        "Mona" = 6755672518;
+        "Motion" = 6746637149;
         "MusicBox" = 1614730313;
         "MusicHarbor" = 1440405750;
         "MusicSmart" = 1512195368;
         "Night Sky" = 475772902;
         "Noir" = 1592917505;
-        "Numbers" = 409203825;
-        "Pages" = 409201541;
+        "Numbers" = 361304891;
+        "OneDrive" = 823766827;
+        "Pages" = 361309726;
         "Photomator" = 1444636541;
         "Pinning" = 6472634746;
-        "Pixelmator Pro" = 1289583905;
-        "Pizza Helper" = 1635319193;
+        "Pixelmator Pro" = 6746662575;
         "Play" = 1596506190;
         "Prompt" = 1594420480;
         "Pure Paste" = 1611378436;
+        "QQ" = 451108668;
         "Reeder" = 6475002485;
-        "Screens 5" = 1663047912;
         "Shareful" = 1522267256;
-        "Shazam" = 897118787;
         "Sketch" = 1667260533;
-        "SnippetsLab" = 1006087419;
+        "Slack" = 803453959;
         "StopTheMadness Pro" = 6471380298;
         "Streaks" = 963034692;
         "SubManager" = 1632853914;
-        "Tampermonkey" = 6738342400;
-        "Tapestry" = 6448078074;
+        "Telegram" = 747648890;
+        "TencentMeeting" = 1484048379;
         "TestFlight" = 899247664;
         "Tot" = 1491071483;
         "Tripsy" = 1429967544;
-        "Turn Off the Lights for Safari" = 1273998507;
         "Velja" = 1607635845;
         "WaterMinder" = 1415257369;
-        "Wayback Machine" = 1472432422;
+        "WeChat" = 836500024;
         "Wipr" = 1662217862;
         "Xcode" = 497799835;
         "爱奇艺" = 1012296988;
@@ -187,7 +163,6 @@ in
       "/System/Applications/Phone.app"
       "/System/Volumes/Preboot/Cryptexes/App/System/Applications/Safari.app"
       "/Applications/Helium.app"
-      "/Applications/ChatGPT Atlas.app"
       "/System/Applications/Messages.app"
       "/System/Applications/Music.app"
       "/System/Applications/Mail.app"

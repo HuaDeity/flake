@@ -10,12 +10,14 @@
     nix.settings.trusted-users = [ "@admin" ];
 
     programs.bash = {
+      enable = false;
       interactiveShellInit = ''
         PS1='\h:\W \u\$ '
       '';
     };
 
     programs.zsh = {
+      enable = false;
       enableBashCompletion = false;
       enableGlobalCompInit = false;
       interactiveShellInit = ''

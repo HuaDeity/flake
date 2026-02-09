@@ -22,7 +22,9 @@ bat-extras.pkg-path = "bat-extras.core"
 biome.pkg-path = "biome"
 chafa.pkg-path = "chafa"
 chezmoi.pkg-path = "chezmoi"
-codex.pkg-path = "codex"
+claude-code.pkg-path = "claude-code"
+conda.pkg-path = "conda"
+conda.systems = ["aarch64-linux", "x86_64-linux"]
 delta.pkg-path = "delta"
 direnv.pkg-path = "direnv"
 doppler.pkg-path = "doppler"
@@ -30,8 +32,10 @@ eza.pkg-path = "eza"
 fd.pkg-path = "fd"
 fzf.pkg-path = "fzf"
 gemini-cli.pkg-path = "gemini-cli"
+ghostscript.pkg-path = "ghostscript"
 git.pkg-path = "git"
 git-lfs.pkg-path = "git-lfs"
+git-xet.pkg-path = "git-xet"
 glow.pkg-path = "glow"
 hexyl.pkg-path = "hexyl"
 imagemagick.pkg-path = "imagemagick"
@@ -39,7 +43,6 @@ jq.pkg-path = "jq"
 jujutsu.pkg-path = "jujutsu"
 lazygit.pkg-path = "lazygit"
 ltex-ls-plus.pkg-path = "ltex-ls-plus"
-ollama.pkg-path = "ollama"
 markdownlint-cli2.pkg-path = "markdownlint-cli2"
 marksman.pkg-path = "marksman"
 mihomo.pkg-path = "mihomo"
@@ -58,11 +61,6 @@ vscode-langservers-extracted.pkg-path = "vscode-langservers-extracted"
 wakatime-cli.pkg-path = "wakatime-cli"
 yazi.pkg-path = "yazi"
 zoxide.pkg-path = "zoxide"
-just.pkg-path = "just"
-claude-code.pkg-path = "claude-code"
-conda.pkg-path = "conda"
-conda.systems = ["aarch64-linux", "x86_64-linux"]
-ghostscript.pkg-path = "ghostscript"
 # gum.pkg-path = "gum"
 # gum.version = "^0.14.5"
 
@@ -118,9 +116,7 @@ ghostscript.pkg-path = "ghostscript"
 ## ... environments to create a composed environment
 ## ------------------------------------------------------------------
 [include]
-environments = [
-    { remote = "HuaDeity/default-darwin" }
-]
+environments = [{ reference = "HuaDeity/default" }]
 # environments = [
 #     { dir = "../common" }
 # ]

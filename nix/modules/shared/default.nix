@@ -9,7 +9,6 @@
 {
   imports = [
     ./options.nix
-    inputs.flox-manifest-fetch.flakeModules.floxManifests
   ];
 
   config =
@@ -17,6 +16,7 @@
       isHomeManager = lib.hasAttrByPath [ "submoduleSupport" "enable" ] options;
       hasGc = lib.hasAttrByPath [ "nix" "gc" ] options;
       hasPkgflow = lib.hasAttrByPath [ "pkgflow" ] options;
+      # targetFile = inputs.self + config.self.homeModuleDir + "/packages/shared.toml";
     in
     lib.mkMerge [
       # Conditional nix.package based on submoduleSupport
@@ -25,7 +25,7 @@
       })
 
       # Conditional nix.gc
-      (lib.mkIf ((!isHomeManager || !config.submoduleSupport.enable)) (
+      (lib.mkIf (!isHomeManager || !config.submoduleSupport.enable) (
         lib.optionalAttrs hasGc {
           nix.gc.automatic = true;
         }
@@ -34,12 +34,7 @@
       (lib.optionalAttrs hasPkgflow {
         pkgflow = {
           pkgs.nixpkgs = [ "brew" ];
-          manifestFiles = map (m: "${inputs.self}/${m}") config.floxManifests.manifests;
-        };
-        floxManifests = {
-          enable = true;
-          environments = [ "default" ];
-          cacheDir = ".flox-manifests";
+          manifestFiles = [ ("${inputs.self}/${config.self.homeModuleDir}/flox/env/shared.toml") ];
         };
       })
     ];

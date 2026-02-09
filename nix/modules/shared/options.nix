@@ -11,10 +11,10 @@
         description = "Relative path to the flake directory";
         readOnly = true;
       };
-      floxDir = lib.mkOption {
+      homeModuleDir = lib.mkOption {
         type = lib.types.str;
-        default = "nix/modules/home/flox";
-        description = "Relative path to the flox directory";
+        default = "nix/modules/home";
+        description = "Relative path to the home modules directory";
         readOnly = true;
       };
     };
