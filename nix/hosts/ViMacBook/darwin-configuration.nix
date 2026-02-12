@@ -103,7 +103,6 @@ in
         "Flighty" = 1358823008;
         "GoodLinks" = 1474335294;
         "Infuse" = 1136220934;
-        "Kagi for Safari" = 1622835804;
         "Keynote" = 361285480;
         "Kindle" = 302584613;
         "Logic Pro" = 1615087040;
