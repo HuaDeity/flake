@@ -11,10 +11,6 @@
   config = {
     home.stateVersion = "25.05";
 
-    nix.extraOptions = ''
-      !include access-tokens.conf
-    '';
-
     programs.home-manager.enable = true;
   };
 }

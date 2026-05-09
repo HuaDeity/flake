@@ -33,11 +33,8 @@
       (lib.optionalAttrs hasPkgflow {
         pkgflow = {
           pkgs.nixpkgs = [ "brew" ];
-          pkgs.flakes = [
-            "brew"
-            "home"
-          ];
-          manifestFiles = [ ("${inputs.self}/${config.self.homeModuleDir}/shared.toml") ];
+          pkgs.flakes = [ "brew" ];
+          manifestFiles = [ "${inputs.self}/${config.self.homeModuleDir}/shared.toml" ];
         };
       })
     ];
