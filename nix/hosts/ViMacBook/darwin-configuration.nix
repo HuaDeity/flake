@@ -6,7 +6,7 @@
 }:
 let
   user = "huadeity";
-  brewPrefix = config.homebrew.brewPrefix;
+  brewPrefix = config.homebrew.prefix;
 in
 {
   imports = [
@@ -18,7 +18,7 @@ in
 
     darwin.primaryUser.name = user;
 
-    users.users.${user}.shell = "${brewPrefix}/fish";
+    users.users.${user}.shell = "${brewPrefix}/bin/fish";
 
     environment.profiles = lib.mkOrder 799 [ "$HOME/.local/state/nix/profile" ];
 
