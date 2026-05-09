@@ -60,6 +60,19 @@
     };
 
     system.defaults = {
+      CustomUserPreferences = {
+        NSGlobalDomain = {
+          NSQuitAlwaysKeepsWindows = true;
+        };
+        "com.apple.Safari" = {
+          IncludeDevelopMenu = true;
+          ShowStandaloneTabBar = false;
+        };
+        "com.apple.Safari.SandboxBroker" = {
+          ShowDevelopMenu = true;
+        };
+      };
+
       dock = {
         autohide = true;
         show-recents = true;
@@ -76,6 +89,7 @@
       };
 
       NSGlobalDomain = {
+        AppleIconAppearanceTheme = "RegularAutomatic";
         AppleKeyboardUIMode = 2;
         ApplePressAndHoldEnabled = false;
         AppleShowAllExtensions = false;
