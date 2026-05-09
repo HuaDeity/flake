@@ -307,11 +307,11 @@
     },
     "pkgflow": {
       "locked": {
-        "lastModified": 1778307409,
-        "narHash": "sha256-Vak8Bkiv4RjXLluPuYJTDt8uaS6i4ksCO3uBQiytMN0=",
+        "lastModified": 1778317255,
+        "narHash": "sha256-WZxKmjZBTRjfsEeNtVDYsjYYunktfid9VID7XTAzY4E=",
         "owner": "HuaDeity",
         "repo": "pkgflow",
-        "rev": "3b5f15d1931e7d439bda07c66bb3f28c27746a98",
+        "rev": "d10bf29a6efe0a98e4090d9af67c0f5e5ed31d43",
         "type": "github"
       },
       "original": {
