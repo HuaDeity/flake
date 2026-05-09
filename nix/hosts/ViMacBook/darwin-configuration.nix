@@ -25,38 +25,26 @@ in
     homebrew = {
       enable = true;
       taps = [
-        "domt4/autoupdate"
-        "hakonharnes/tap"
         "huadeity/private"
         "huadeity/tap"
-        "laishulu/homebrew"
-        "nrlquaker/createzap"
       ];
       brews = [
         "container"
         "container-compose"
         "fish"
         "hugo"
-        "macism"
+        "mackup"
         "mas"
-        "pbctl"
-        "pinentry-mac"
         "tag"
-        "tex-fmt"
-        "texlab"
       ];
       casks = [
-        "aldente"
-        "antinote"
         "apparency"
         "archaeology"
-        "basictex"
         "bettertouchtool"
         "claude"
         "cleanshot"
         "crossover"
         "downie"
-        "drawio"
         "folder-preview-pro"
         "font-commit-mono-nerd-font"
         "ghostty"
@@ -67,26 +55,26 @@ in
         "keka"
         "kekaexternalhelper"
         "onyx"
+        "parallels"
         "pearcleaner"
         "permute"
+        "pixelsnap"
         "popclip"
-        "qlvideo"
+        "quicklook-video"
         "rar"
         "raycast"
         "secretive"
         "sf-symbols"
-        "shortcutie"
-        "skim"
-        "sleeve"
+        "huadeity/private/shortcutie"
+        "huadeity/private/sleeve"
         "spotify"
-        "supercharge"
+        "huadeity/private/supercharge"
         "surge"
         "suspicious-package"
-        "syntax-highlight"
         "tower"
         "vesktop"
+        "wechat"
         "zed@preview"
-        "zotero"
       ];
       masApps = {
         "Actions" = 1586435171;
@@ -96,8 +84,10 @@ in
         "Cardhop" = 1290358394;
         "Compressor" = 6746516157;
         "Craft" = 1487937127;
+        "Current" = 6758530974;
         "Developer" = 640199958;
         "Dice by PCalc" = 1479250666;
+        "Disco Elysium" = 1508191454;
         "Fantastical" = 975937182;
         "Final Cut Pro" = 1631624924;
         "Flighty" = 1358823008;
@@ -110,7 +100,7 @@ in
         "MainStage" = 6746637089;
         "Maipo" = 789066512;
         "Markdown Preview" = 6739955340;
-        # "Marked 3" = 0;
+        # "Marked" = 0;
         "Microsoft Excel" = 462058435;
         "Microsoft PowerPoint" = 462062816;
         "Microsoft Word" = 462054704;
@@ -122,19 +112,19 @@ in
         "Night Sky" = 475772902;
         "Noir" = 1592917505;
         "Numbers" = 361304891;
-        "OneDrive" = 823766827;
+        # "OneDrive" = 823766827;
         "Pages" = 361309726;
         "Photomator" = 1444636541;
         "Pinning" = 6472634746;
         "Pixelmator Pro" = 6746662575;
         "Play" = 1596506190;
-        "Prompt" = 1594420480;
         "Pure Paste" = 1611378436;
         "QQ" = 451108668;
         "Reeder" = 6475002485;
         "Shareful" = 1522267256;
         "Sketch" = 1667260533;
         "Slack" = 803453959;
+        "Source Code Preview" = 6759270528;
         "StopTheMadness Pro" = 6471380298;
         "Streaks" = 963034692;
         "SubManager" = 1632853914;
@@ -145,7 +135,6 @@ in
         "Tripsy" = 1429967544;
         "Velja" = 1607635845;
         "WaterMinder" = 1415257369;
-        "WeChat" = 836500024;
         "Wipr" = 1662217862;
         "Xcode" = 497799835;
         "爱奇艺" = 1012296988;
@@ -163,7 +152,7 @@ in
       "/System/Volumes/Preboot/Cryptexes/App/System/Applications/Safari.app"
       "/Applications/Helium.app"
       "/System/Applications/Messages.app"
-      "/System/Applications/Music.app"
+      "/Applications/Sleeve.app"
       "/System/Applications/Mail.app"
       "/Applications/Reeder.app"
       "/Applications/Bear.app"
