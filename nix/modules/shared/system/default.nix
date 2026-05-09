@@ -1,5 +1,6 @@
 {
   perSystem,
+  pkgs,
   ...
 }:
 
@@ -14,6 +15,9 @@
 
     environment.systemPackages = [
       perSystem.flox.default
+      pkgs.nh
+      pkgs.nixfmt
+      pkgs.nixd
     ];
   };
 }

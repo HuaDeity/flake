@@ -1,10 +1,10 @@
 {
   inputs,
-  config,
+  # config,
   ...
 }:
 let
-  homeAbsPath = "${config.home.homeDirectory}/${config.self.flakeDir}/${config.self.homeModuleDir}";
+  # homeAbsPath = "${config.home.homeDirectory}/${config.self.flakeDir}/${config.self.homeModuleDir}";
 in
 {
   imports = [
@@ -12,5 +12,5 @@ in
     inputs.pkgflow.homeModules.pkgflow
   ];
 
-  home.file.".flox".source = config.lib.file.mkOutOfStoreSymlink (homeAbsPath + "/flox");
+  # home.file.".flox".source = config.lib.file.mkOutOfStoreSymlink (homeAbsPath + "/flox");
 }
