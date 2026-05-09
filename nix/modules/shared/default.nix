@@ -16,7 +16,6 @@
       isHomeManager = lib.hasAttrByPath [ "submoduleSupport" "enable" ] options;
       hasGc = lib.hasAttrByPath [ "nix" "gc" ] options;
       hasPkgflow = lib.hasAttrByPath [ "pkgflow" ] options;
-      # targetFile = inputs.self + config.self.homeModuleDir + "/packages/shared.toml";
     in
     lib.mkMerge [
       # Conditional nix.package based on submoduleSupport
@@ -34,7 +33,7 @@
       (lib.optionalAttrs hasPkgflow {
         pkgflow = {
           pkgs.nixpkgs = [ "brew" ];
-          manifestFiles = [ ("${inputs.self}/${config.self.homeModuleDir}/flox/env/shared.toml") ];
+          manifestFiles = [ ("${inputs.self}/${config.self.homeModuleDir}/shared.toml") ];
         };
       })
     ];
