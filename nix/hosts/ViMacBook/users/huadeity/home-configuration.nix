@@ -63,6 +63,10 @@ in
   targets.darwin.currentHostDefaults = {
     NSGlobalDomain = {
       "com.apple.mouse.tapBehavior" = true;
+      "com.apple.trackpad.threeFingerDragGesture" = true;
+      "com.apple.trackpad.threeFingerHorizSwipeGesture" = 0;
+      "com.apple.trackpad.threeFingerTapGesture" = 0;
+      "com.apple.trackpad.threeFingerVertSwipeGesture" = 0;
     };
     "com.apple.controlcenter" = {
       BatteryShowPercentage = true;
