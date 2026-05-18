@@ -1,6 +1,6 @@
 {
   inputs,
-  config,
+  # config,
   ...
 }:
 let
@@ -62,7 +62,7 @@ in
 
   targets.darwin.currentHostDefaults = {
     NSGlobalDomain = {
-      "com.apple.mouse.tapBehavior" = 1;
+      "com.apple.mouse.tapBehavior" = true;
     };
     "com.apple.controlcenter" = {
       BatteryShowPercentage = true;
