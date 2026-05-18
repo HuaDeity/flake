@@ -45,6 +45,7 @@ in
         "cleanshot"
         "crossover"
         "downie"
+        "equibop"
         "folder-preview-pro"
         "font-commit-mono-nerd-font"
         "ghostty"
@@ -55,6 +56,7 @@ in
         "keka"
         "kekaexternalhelper"
         "onyx"
+        "opgg"
         "parallels"
         "pearcleaner"
         "permute"
@@ -62,7 +64,6 @@ in
         "popclip"
         "quicklook-video"
         "rar"
-        "raycast"
         "secretive"
         "sf-symbols"
         "huadeity/private/shortcutie"
@@ -72,7 +73,7 @@ in
         "surge"
         "suspicious-package"
         "tower"
-        "vesktop"
+        "uu-booster"
         "wechat"
         "zed@preview"
       ];
@@ -83,6 +84,7 @@ in
         "Bob" = 1630034110;
         "Cardhop" = 1290358394;
         "Compressor" = 6746516157;
+        "Couch" = 963584693;
         "Craft" = 1487937127;
         "Current" = 6758530974;
         "Developer" = 640199958;
@@ -92,15 +94,16 @@ in
         "Final Cut Pro" = 1631624924;
         "Flighty" = 1358823008;
         "GoodLinks" = 1474335294;
+        "Indigo" = 6763755310;
         "Infuse" = 1136220934;
         "Keynote" = 361285480;
         "Kindle" = 302584613;
         "Logic Pro" = 1615087040;
         "LookUp" = 872564448;
+        "Mactracker" = 430255202;
         "MainStage" = 6746637089;
         "Maipo" = 789066512;
         "Markdown Preview" = 6739955340;
-        # "Marked" = 0;
         "Microsoft Excel" = 462058435;
         "Microsoft PowerPoint" = 462062816;
         "Microsoft Word" = 462054704;
@@ -142,7 +145,7 @@ in
       };
       onActivation = {
         autoUpdate = true;
-        cleanup = "zap";
+        cleanup = "uninstall"; # temporary
         upgrade = true;
       };
     };
