@@ -59,56 +59,6 @@
       };
     };
 
-    system.defaults = {
-      CustomUserPreferences = {
-        NSGlobalDomain = {
-          NSQuitAlwaysKeepsWindows = true;
-        };
-        "com.apple.Safari" = {
-          IncludeDevelopMenu = true;
-          ShowStandaloneTabBar = false;
-        };
-        "com.apple.Safari.SandboxBroker" = {
-          ShowDevelopMenu = true;
-        };
-      };
-
-      dock = {
-        autohide = true;
-        show-recents = true;
-        launchanim = true;
-        orientation = "bottom";
-      };
-
-      hitoolbox = {
-        AppleFnUsageType = "Change Input Source";
-      };
-
-      finder = {
-        _FXShowPosixPathInTitle = false;
-      };
-
-      NSGlobalDomain = {
-        AppleIconAppearanceTheme = "RegularAutomatic";
-        AppleKeyboardUIMode = 2;
-        ApplePressAndHoldEnabled = false;
-        AppleShowAllExtensions = false;
-
-        KeyRepeat = 6; # Values: 120, 90, 60, 30, 12, 6, 2
-        InitialKeyRepeat = 35; # Values: 120, 94, 68, 35, 25, 15
-
-        "com.apple.keyboard.fnState" = true;
-        "com.apple.mouse.tapBehavior" = 1;
-        "com.apple.sound.beep.feedback" = 0;
-        "com.apple.sound.beep.volume" = 1.0;
-      };
-
-      trackpad = {
-        Clicking = true;
-        TrackpadThreeFingerDrag = true;
-      };
-    };
-
     system.stateVersion = 6;
   };
 }
